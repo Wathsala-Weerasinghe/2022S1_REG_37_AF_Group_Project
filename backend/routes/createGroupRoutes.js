@@ -1,9 +1,9 @@
 const router = require("express").Router();
-let Greg = require("../models/createGroups");
+let GrpReg = require("../models/createGroups");
 
 //create function
-//http://localhost:8070/GrpReg/add
-router.route("/add/group").post((req,res) => {
+//http://localhost:8070/create/add
+router.route("/add/groupC").post((req,res) => {
 
     const groupID = req.body.groupID;
     const groupName = req.body.groupName;
@@ -48,11 +48,11 @@ router.route("/add/group").post((req,res) => {
 
 
 //get method
-//http://localhost:8070/GrpReg/c/
+//http://localhost:8070/create/c/
 
 router.route("/c/").get((req,res)=>{
-    GrpReg.find().then((GrpRegs)=> {
-        res.json(GrpRegs) //send response from json format to the frontend
+    GrpReg.find().then((grpRegs)=> {
+        res.json(grpRegs) //send response from json format to the frontend
     }).catch((err)=>{
         console.log(err);
     })
@@ -62,8 +62,8 @@ router.route("/c/").get((req,res)=>{
 router.route("/get/:id").get(async(req,res)=> {
     let userid = req.params.id;
 
-    const user = await GrpReg.findById(userid).then((GrpReg) => {
-        res.status(200).send({status : "User Fetched",GrpReg})
+    const user = await GrpReg.findById(userid).then((grpReg) => {
+        res.status(200).send({status : "User Fetched",grpReg})
     }).catch((err)=>{
         console.log(err.message);
         res.status(500).send({status: "Error with fetch user", error : err.message});

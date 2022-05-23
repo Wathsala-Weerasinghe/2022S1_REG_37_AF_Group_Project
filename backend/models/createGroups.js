@@ -45,7 +45,7 @@ const gRegSchema = new schema({
     }
 })
 
-//table name Confirmation
+//table name GroupReg
 const createGroups = mongoose.model("GroupReg",gRegSchema);
 
 module.exports = createGroups;

@@ -43,12 +43,11 @@ console.log("Mongodb Connection Success!!");
 
 
 //importing the confirm js file
-const grpRouter = require("./routes/createGroupRoutes.js");
-
+const confRouter = require("./routes/createGroupRoutes.js");
 
 //pass parameters to redirect the confirm.js file
 //http://localhost:8080/deliver/deliver
-app.use("/grpcreate", grpRouter);
+app.use("/create", confRouter);
 
 
 //listen to the 8070 port
