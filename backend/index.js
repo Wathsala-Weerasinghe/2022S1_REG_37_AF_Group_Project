@@ -24,9 +24,7 @@ mongoose.connect(
 );
 
 // Router
-// app.use("/user", require("./routes/userRoute"));
-
-
+app.use("/marking", require("./routes/markingSchemeRoute"));
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
