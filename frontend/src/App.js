@@ -1,16 +1,11 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-
 import Layout from "./components/Layout";
-
 import Register from './components/Register';
 import Login from './components/Login';
-
-
 import './App.css';
 
 
 function App() {
-
   return (
     <div className="App container">
       <BrowserRouter>
