@@ -25,9 +25,7 @@ const regSchema = new schema2({
         type : String,
         required : true //validate part
     }
-
 })
-
 //table name RegisterTopic
 const registerTopic = mongoose.model("RegisterTopic",regSchema);
 
