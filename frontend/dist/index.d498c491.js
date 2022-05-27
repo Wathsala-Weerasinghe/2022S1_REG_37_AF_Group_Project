@@ -28893,30 +28893,51 @@ var _queryString = require("query-string");
 var _queryStringDefault = parcelHelpers.interopDefault(_queryString);
 var _socketIoClient = require("socket.io-client");
 var _socketIoClientDefault = parcelHelpers.interopDefault(_socketIoClient);
-class Chat extends (0, _react.Component) {
-    constructor(props){
-        super(props);
-    }
-    componentDidMount() {}
-    componentDidUpdate() {}
-    render() {
-        return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-            children: "Chat"
-        }, void 0, false, {
-            fileName: "components/Chat.jsx",
-            lineNumber: 21,
-            columnNumber: 13
-        }, this);
-    }
-}
+var _s = $RefreshSig$();
+let socket;
+const Chat = ({ location  })=>{
+    _s();
+    const [itNumber1, setItNumber] = (0, _react.useState)("");
+    const [roomId1, setRoomId] = (0, _react.useState)("");
+    const ENDPOINT = "http://localhost:5000";
+    (0, _react.useEffect)(()=>{
+        const { itNumber , roomId  } = (0, _queryStringDefault.default).parse(window.location.search);
+        //console.log(location)
+        //console.log(itNumber,roomId)
+        socket = (0, _socketIoClientDefault.default)(ENDPOINT);
+        setItNumber(itNumber);
+        setRoomId(roomId);
+        //console.log(socket)
+        socket.emit("join", {
+            itNumber,
+            roomId
+        }, ({ error  })=>{
+            alert(error);
+        });
+    }, [
+        ENDPOINT,
+        window.location.search
+    ]);
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+        children: "Chat"
+    }, void 0, false, {
+        fileName: "components/Chat.jsx",
+        lineNumber: 30,
+        columnNumber: 9
+    }, undefined);
+};
+_s(Chat, "OhJSt6koCQ7AAFrTzQKmoCbnr48=");
+_c = Chat;
 exports.default = Chat;
+var _c;
+$RefreshReg$(_c, "Chat");
 
   $parcel$ReactRefreshHelpers$9b8d.postlude(module);
 } finally {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","query-string":"11cDl","socket.io-client":"8HBJR"}],"11cDl":[function(require,module,exports) {
+},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","query-string":"11cDl","socket.io-client":"8HBJR","react/jsx-dev-runtime":"iTorj"}],"11cDl":[function(require,module,exports) {
 "use strict";
 const strictUriEncode = require("strict-uri-encode");
 const decodeComponent = require("decode-uri-component");

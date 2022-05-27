@@ -1,19 +1,40 @@
 const express = require('express')
-const socketio=require('socket.io')
+const {Server}=require('socket.io')
 const http=require('http')
+const cors=require('cors')
 
 const PORT=process.env.PORT||5000
 
 const router=require('./routes/router')
 
 const app=express()
+
 const server=http.createServer(app)
-const io=socketio(server)
+const io=new Server(server,{
+    cors:{
+        origin:"http://localhost:1234"
+    }
+})
+
+//app.use(cors())
+app.use(router)
+
 
 //socket paramter is passed from the frontend
 //as a argument
 io.on('connection',(socket)=>{
     console.log("We have a new connection!!")
+
+    socket.on('join',({itNumber,roomId}, callback)=>{
+        console.log(itNumber,roomId)
+        //const error=true;
+
+        /*if(error){
+            callback({error:'error'})
+        }*/
+
+
+    })
 
 
 
@@ -24,7 +45,9 @@ io.on('connection',(socket)=>{
     
 })
 
-app.use(router)
+
+
+
 
 server.listen(PORT,()=>{
     console.log(`Server has started on port ${PORT}`)

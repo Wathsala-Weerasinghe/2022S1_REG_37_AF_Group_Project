@@ -1,33 +1,39 @@
-import React,{Component} from 'react'
+import React,{useState,useEffect} from 'react'
 import queryString from 'query-string'
-import io from 'socket.io-client'
+import io, { Socket } from 'socket.io-client'
 
-export default class Chat extends Component{
-    constructor(props){
-        super(props)
+let socket;
 
-    }
+const Chat=({location})=>{
 
-    componentDidMount(){
+    const [itNumber,setItNumber]=useState('')
+    const [roomId,setRoomId]=useState('');
+    const ENDPOINT='http://localhost:5000'
 
-    }
+    useEffect(()=>{
+        const {itNumber,roomId}=queryString.parse(window.location.search)
+        //console.log(location)
+        //console.log(itNumber,roomId)
 
-    componentDidUpdate(){
-        
-    }
+        socket=io(ENDPOINT)
 
-    render(){
-        return(
-            <h1>Chat</h1>
-        )
-    }
+        setItNumber(itNumber)
+        setRoomId(roomId)
+        //console.log(socket)
+        socket.emit('join',{itNumber,roomId},({error})=>{
+            alert(error)
+        })
 
+    },[ENDPOINT,window.location.search])
 
-
-
+    return(
+        <h1>Chat</h1>
+    )
 
 
 }
+
+export default Chat
 
 
 
