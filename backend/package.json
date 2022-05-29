@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "dev": "nodemon server.js",
-    "chat":"nodemon ChatServer.js"
+    "chat": "nodemon ChatServer.js"
   },
   "author": "Dinul",
   "license": "ISC",
