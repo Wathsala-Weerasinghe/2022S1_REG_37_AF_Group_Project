@@ -27160,7 +27160,7 @@ function AllTReg() {
                         color: "#2f4f4f"
                     },
                     children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("i", {
-                        children: "All Order Confirmations."
+                        children: "All Registered Groups."
                     }, void 0, false, {
                         fileName: "src/components/AllRgister.js",
                         lineNumber: 7,
@@ -27217,38 +27217,31 @@ function AllTReg() {
                     children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("tr", {
                         children: [
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("th", {
-                                children: "Customer Name"
+                                children: "Group ID"
                             }, void 0, false, {
                                 fileName: "src/components/AllRgister.js",
                                 lineNumber: 13,
                                 columnNumber: 25
                             }, this),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("th", {
-                                children: "Address"
+                                children: "Group Name"
                             }, void 0, false, {
                                 fileName: "src/components/AllRgister.js",
                                 lineNumber: 14,
                                 columnNumber: 25
                             }, this),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("th", {
-                                children: "Phone"
+                                children: "Leader's Name"
                             }, void 0, false, {
                                 fileName: "src/components/AllRgister.js",
                                 lineNumber: 15,
                                 columnNumber: 25
                             }, this),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("th", {
-                                children: "Method of payment"
+                                children: "Leader's IT number"
                             }, void 0, false, {
                                 fileName: "src/components/AllRgister.js",
                                 lineNumber: 16,
-                                columnNumber: 25
-                            }, this),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("th", {
-                                children: "Confirm Date"
-                            }, void 0, false, {
-                                fileName: "src/components/AllRgister.js",
-                                lineNumber: 17,
                                 columnNumber: 25
                             }, this)
                         ]
@@ -27273,223 +27266,45 @@ function AllTReg() {
                 children: "Add New Order"
             }, void 0, false, {
                 fileName: "src/components/AllRgister.js",
-                lineNumber: 21,
+                lineNumber: 20,
                 columnNumber: 13
             }, this),
             "\xa0\xa0\xa0\xa0",
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
                 fileName: "src/components/AllRgister.js",
-                lineNumber: 23,
+                lineNumber: 22,
                 columnNumber: 13
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
                 fileName: "src/components/AllRgister.js",
-                lineNumber: 23,
+                lineNumber: 22,
                 columnNumber: 22
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
                 fileName: "src/components/AllRgister.js",
-                lineNumber: 23,
+                lineNumber: 22,
                 columnNumber: 31
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                class: "card-group",
-                children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        class: "card",
-                        children: [
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                                src: "/images/im1.jpeg",
-                                class: "card-img-top",
-                                alt: "#"
-                            }, void 0, false, {
-                                fileName: "src/components/AllRgister.js",
-                                lineNumber: 27,
-                                columnNumber: 5
-                            }, this),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                class: "card-body",
-                                children: [
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h5", {
-                                        class: "card-title",
-                                        children: "Organic Food Products"
-                                    }, void 0, false, {
-                                        fileName: "src/components/AllRgister.js",
-                                        lineNumber: 29,
-                                        columnNumber: 7
-                                    }, this),
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                                        class: "card-text",
-                                        children: "All our products are organic."
-                                    }, void 0, false, {
-                                        fileName: "src/components/AllRgister.js",
-                                        lineNumber: 30,
-                                        columnNumber: 7
-                                    }, this),
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                                        class: "card-text",
-                                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("small", {
-                                            class: "text-muted",
-                                            children: "Last updated 3 mins ago"
-                                        }, void 0, false, {
-                                            fileName: "src/components/AllRgister.js",
-                                            lineNumber: 31,
-                                            columnNumber: 28
-                                        }, this)
-                                    }, void 0, false, {
-                                        fileName: "src/components/AllRgister.js",
-                                        lineNumber: 31,
-                                        columnNumber: 7
-                                    }, this)
-                                ]
-                            }, void 0, true, {
-                                fileName: "src/components/AllRgister.js",
-                                lineNumber: 28,
-                                columnNumber: 5
-                            }, this)
-                        ]
-                    }, void 0, true, {
-                        fileName: "src/components/AllRgister.js",
-                        lineNumber: 26,
-                        columnNumber: 3
-                    }, this),
-                    "\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0",
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        class: "card",
-                        children: [
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                                src: "/images/im2.jpeg",
-                                class: "card-img-top",
-                                alt: "#"
-                            }, void 0, false, {
-                                fileName: "src/components/AllRgister.js",
-                                lineNumber: 35,
-                                columnNumber: 5
-                            }, this),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                class: "card-body",
-                                children: [
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h5", {
-                                        class: "card-title",
-                                        children: "Other Equipments"
-                                    }, void 0, false, {
-                                        fileName: "src/components/AllRgister.js",
-                                        lineNumber: 37,
-                                        columnNumber: 7
-                                    }, this),
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                                        class: "card-text",
-                                        children: "We will deliver all the products to your door step."
-                                    }, void 0, false, {
-                                        fileName: "src/components/AllRgister.js",
-                                        lineNumber: 38,
-                                        columnNumber: 7
-                                    }, this),
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                                        class: "card-text",
-                                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("small", {
-                                            class: "text-muted",
-                                            children: "Last updated 3 mins ago"
-                                        }, void 0, false, {
-                                            fileName: "src/components/AllRgister.js",
-                                            lineNumber: 39,
-                                            columnNumber: 28
-                                        }, this)
-                                    }, void 0, false, {
-                                        fileName: "src/components/AllRgister.js",
-                                        lineNumber: 39,
-                                        columnNumber: 7
-                                    }, this)
-                                ]
-                            }, void 0, true, {
-                                fileName: "src/components/AllRgister.js",
-                                lineNumber: 36,
-                                columnNumber: 5
-                            }, this)
-                        ]
-                    }, void 0, true, {
-                        fileName: "src/components/AllRgister.js",
-                        lineNumber: 34,
-                        columnNumber: 3
-                    }, this),
-                    " \xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0",
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        class: "card",
-                        children: [
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                                src: "/images/im3.jpeg",
-                                class: "card-img-top",
-                                alt: "#"
-                            }, void 0, false, {
-                                fileName: "src/components/AllRgister.js",
-                                lineNumber: 43,
-                                columnNumber: 5
-                            }, this),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                class: "card-body",
-                                children: [
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h5", {
-                                        class: "card-title",
-                                        children: "Easy Payment"
-                                    }, void 0, false, {
-                                        fileName: "src/components/AllRgister.js",
-                                        lineNumber: 45,
-                                        columnNumber: 7
-                                    }, this),
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                                        class: "card-text",
-                                        children: "We provide our servise to our valued customers by introducing easy payment methods via online."
-                                    }, void 0, false, {
-                                        fileName: "src/components/AllRgister.js",
-                                        lineNumber: 46,
-                                        columnNumber: 7
-                                    }, this),
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                                        class: "card-text",
-                                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("small", {
-                                            class: "text-muted",
-                                            children: "Last updated 3 mins ago"
-                                        }, void 0, false, {
-                                            fileName: "src/components/AllRgister.js",
-                                            lineNumber: 47,
-                                            columnNumber: 28
-                                        }, this)
-                                    }, void 0, false, {
-                                        fileName: "src/components/AllRgister.js",
-                                        lineNumber: 47,
-                                        columnNumber: 7
-                                    }, this)
-                                ]
-                            }, void 0, true, {
-                                fileName: "src/components/AllRgister.js",
-                                lineNumber: 44,
-                                columnNumber: 5
-                            }, this)
-                        ]
-                    }, void 0, true, {
-                        fileName: "src/components/AllRgister.js",
-                        lineNumber: 42,
-                        columnNumber: 3
-                    }, this)
-                ]
-            }, void 0, true, {
+                class: "card-group"
+            }, void 0, false, {
                 fileName: "src/components/AllRgister.js",
-                lineNumber: 25,
+                lineNumber: 24,
                 columnNumber: 13
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
                 fileName: "src/components/AllRgister.js",
-                lineNumber: 51,
+                lineNumber: 26,
                 columnNumber: 17
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
                 fileName: "src/components/AllRgister.js",
-                lineNumber: 51,
+                lineNumber: 26,
                 columnNumber: 26
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
                 fileName: "src/components/AllRgister.js",
-                lineNumber: 51,
+                lineNumber: 26,
                 columnNumber: 35
             }, this)
         ]
