@@ -1,9 +1,6 @@
 import React from "react";
 
 function Login() {
-
-  
-
   return (
     <div className="editable-form">
         <h4>Register Topic Name</h4>

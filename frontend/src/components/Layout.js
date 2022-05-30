@@ -10,10 +10,13 @@ class Layout extends React.Component
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
             <ul className="navbar-nav">
               <li>
-                {<Link className="nav-item nav-link" to="/register">Create Group</Link>}
+                {<Link className="nav-item nav-link" to="/Register">Create Group</Link>}
               </li>
               <li>
-                {<Link className="nav-item nav-link" to="/login">Register Topic</Link>}
+                {<Link className="nav-item nav-link" to="/Login">Register Topic</Link>}
+              </li>
+              <li>
+                {<Link className="nav-item nav-link" to="/AllTReg">All Registration</Link>}
               </li>
             </ul>
          

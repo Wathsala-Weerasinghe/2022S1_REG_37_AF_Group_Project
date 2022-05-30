@@ -1,24 +1,25 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Login from "./components/Login";
+import Register from "./components/Register";
 import Layout from "./components/Layout";
-import Register from './components/Register';
-import Login from './components/Login';
-import './App.css';
+import AllTReg from "./components/AllRgister";
 
 
-function App() {
+ function App() {
   return (
-    <div className="App container">
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Layout />}>
+        <div>
+          <Router>
+            <Layout />
+          <Routes>
+            <Route extact path="/Login" element={<Login />} />
+            <Route  path="/Register" element={<Register />} />
+            <Route  path="/AllTReg" element={<AllTReg />} />
 
-            <Route path="register" element={<Register />} />
-            <Route path="login" element={<Login />} />
-
-          </Route>
-        </Routes>
-      </BrowserRouter>
-    </div>
+            </Routes>
+            </Router>
+        </div>
+    
   );
 }
 
