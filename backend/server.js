@@ -13,12 +13,19 @@ app.use(express.json())
 const port=process.env.PORT||3000
 const uri=process.env.MONGO_URI
 
-mongoose.connect(uri,{useNewUrlParser:true,useUnifiedTopology:true})
+mongoose.connect(uri,{
+    useNewUrlParser:true,
+    useUnifiedTopology:true,
+})
 mongoose.connection.once('open',()=>{
     console.log("MongoDB connected")
 })
 
+//accept topic
+const acceptTopic=require("./routes/AcceptTopic")
+app.use("/acceptTopic",acceptTopic)
+
 app.listen(port,(err)=>{
-    err?console.log(err):console.log("Server running on port 3000")
+    err?console.log(err):console.log("Server running on port"+port)
 })
 
