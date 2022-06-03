@@ -10,49 +10,67 @@ export default class AcceptTopic extends Component{
     constructor(props){
         super(props)
         this.state={
-            groupName:'',
-            groupId:'',
+            GroupName:'',
+            GroupId:'',
             tel:'',
-            topicCategory:'',
-            topicName:'',
-            status:'',
-            comment:'',
-            statusError:'',
-            commentError:''
+            TopicCategory:'',
+            TopicName:'',
+            Status:'',
+            Comment:'',
+            StatusError:'',
+            CommentError:''
         }
+    }
+
+    componentDidMount(){
+        axios.get('')
+        .then(res=>{
+            this.setState({
+                GroupName:res.data,
+                GroupId:res.data,
+                tel:res.data,
+                TopicCategory:res.data,
+                TopicName:res.data,
+
+            })
+        }).catch((err)=>{
+            console.log(err)
+        })
     }
 
     onChangeComment=(e)=>{
         this.setState=({
-            comment: e.target.value
+            Comment: e.target.value
         })
-        console.log(this.state.comment)
+        console.log(this.state.Comment)
     }
 
     onChangeStatus=(e)=>{
         this.setState({
-            status: e.target.value
+            Status: e.target.value
         })
     }
 
     validate=()=>{
-        let commentError=''
-        let statusError=''
+        let CommentError=''
+        let StatusError=''
 
-        if(!this.state.comment){
-            commentError="Please leave a comment"
+        if(!this.state.Comment){
+            CommentError="Please leave a Comment"
         }
-        if(!this.state.status){
-            statusError="Select accept or reject"
+        if(!this.state.Status){
+            StatusError="Select accept or reject"
         }
 
-        if(commentError||statusError){
+        if(CommentError||StatusError){
             this.setState({
-                commentError,
-                statusError
+                CommentError,
+                StatusError
             })
-            return true
+            return false
         }
+
+        return true
 
 
     }
@@ -60,13 +78,13 @@ export default class AcceptTopic extends Component{
     onSubmit=(e)=>{
         e.preventDefault()
         const acceptTopic={
-            groupName:this.state.groupName,
-            groupId:this.state.groupId,
+            GroupName:this.state.GroupName,
+            GroupId:this.state.GroupId,
             tel:this.state.tel,
-            topicCategory:this.state.topicCategory,
-            topicName:this.state.topicName,
-            status:this.state.status,
-            comment:this.state.comment,
+            TopicCategory:this.state.TopicCategory,
+            TopicName:this.state.TopicName,
+            Status:this.state.Status,
+            Comment:this.state.Comment,
 
         }
 
@@ -75,23 +93,46 @@ export default class AcceptTopic extends Component{
         let isValid=this.validate()
 
         if(isValid){
-            axios.post('http://localhost:3000/acceptTopic/accept',acceptTopic)
-            swal.fire("Inserted","Student response recorded","success")
-            .then(()=>{
-                this.setState({
-                    groupName:'',
-                    groupId:'',
-                    tel:'',
-                    topicCategory:'',
-                    topicName:'',
-                    status:'',
-                    comment:'',
 
+            if(this.state.Comment === 'accept'){
+                axios.post('http://localhost:3000/acceptTopic/accept',acceptTopic)
+                .then(()=>{
+                    this.setState({
+                        GroupName:'',
+                        GroupId:'',
+                        tel:'',
+                        TopicCategory:'',
+                        TopicName:'',
+                        Status:'',
+                        Comment:'',
+
+                    })
+                    swal.fire("Inserted","Student response recorded","success")
+                    window.location='/'
+                }).catch((err)=>{
+                    alert(err)
                 })
-                window.location-'/'
-            }).catch((err)=>{
-                alert(err)
-            })
+
+            }else if(this.state.Comment === 'reject'){
+                axios.post('http://localhost:3000/acceptTopic/reject',acceptTopic)
+                .then(()=>{
+                    this.setState({
+                        GroupName:'',
+                        GroupId:'',
+                        tel:'',
+                        TopicCategory:'',
+                        TopicName:'',
+                        Status:'',
+                        Comment:'',
+
+                    })
+                    swal.fire("Inserted","Student response recorded","success")
+                    window.location='/'
+                }).catch((err)=>{
+                    alert(err)
+                })
+
+            }
 
         }
 
@@ -102,19 +143,19 @@ export default class AcceptTopic extends Component{
     render(){
         return(
             <div className="m-5" style={{backgroundColor:"rgb(200,200,200,0.5)", padding:"20px 50px 20px 50px", marginTop:"50px",marginBottom:"50px", borderRadius:"30px"}}>
-                <h3><b>{this.state.groupName}</b></h3>
+                <h3><b>{this.state.GroupName}</b></h3>
                 <form onSubmit={this.onSubmit}>
                     <div className="form-group">
                         <label for="grpName" className="form-label">Group Name</label>
                         <input type="text" className="form-control" id="grpName"
-                        value={this.state.groupName}
+                        value={this.state.GroupName}
                         disabled
                         />
                     </div>
                     <div className="form-group">
                         <label for="grpId" className="form-label">Group Id</label>
                         <input type="text" className="form-control" id="grpId"
-                        value={this.state.groupId}
+                        value={this.state.GroupId}
                         disabled
                         />
                     </div>
@@ -126,24 +167,24 @@ export default class AcceptTopic extends Component{
                         />
                     </div>
                     <div className="form-group">
-                        <label for="topicCategory" className="form-label">Topic Category</label>
-                        <input type="text" className="form-control" id="topicCategory"
-                        value={this.state.topicCategory}
+                        <label for="TopicCategory" className="form-label">Topic Category</label>
+                        <input type="text" className="form-control" id="TopicCategory"
+                        value={this.state.TopicCategory}
                         disabled
                         />
                     </div>
                     <div className="form-group">
-                        <label for="topicName" className="form-label">Topic Name</label>
-                        <input type="text" className="form-control" id="topicName"
-                        value={this.state.topicName}
+                        <label for="TopicName" className="form-label">Topic Name</label>
+                        <input type="text" className="form-control" id="TopicName"
+                        value={this.state.TopicName}
                         disabled
                         />
                     </div>
                     <div className="form-group">
-                        <label for="topicCategory" className="form-label">Comment</label>
-                        <textarea className="form-control" rows="3" value={this.state.comment} onChange={this.onChangeComment}></textarea>
+                        <label for="TopicCategory" className="form-label">Comment</label>
+                        <textarea className="form-control" rows="3" value={this.state.Comment} onChange={this.onChangeComment}></textarea>
                         <div style={{color:"red"}}>
-                            {this.state.commentError}
+                            {this.state.CommentError}
                         </div>
                     </div>
                     <div className="form-check" onChange={this.onChangeStatus}>
@@ -151,12 +192,12 @@ export default class AcceptTopic extends Component{
                         <label class="form-check-label" for="flexRadioDefault1">
                             Accept    
                         </label>
-                        <input type="radio" name="topic" value="reject"/>
+                        <input type="radio" className="form-check-input" name="topic" value="reject"/>
                         <label class="form-check-label" for="flexRadioDefault1">
                             Reject 
                         </label> 
                         <div style={{color:"red"}}>
-                            {this.state.statusError}
+                            {this.state.StatusError}
                         </div>
                     </div>
                     <div className="form-group" align="center">

@@ -25,6 +25,11 @@ mongoose.connection.once('open',()=>{
 const acceptTopic=require("./routes/AcceptTopic")
 app.use("/acceptTopic",acceptTopic)
 
+//evaluate document
+const evalDoc=require("./routes/EvaluateDocument")
+app.use("/evaluateDoc",evalDoc)
+
+
 app.listen(port,(err)=>{
     err?console.log(err):console.log("Server running on port"+port)
 })
