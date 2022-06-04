@@ -1,6 +1,7 @@
 import React,{Component} from 'react'
 import axios from 'axios'
 import swal from 'sweetalert2'
+import {Form} from "react-bootstrap";
 
 export default class EvaluateDocument extends Component{
 
@@ -80,17 +81,20 @@ export default class EvaluateDocument extends Component{
 
         }
 
+        console.log(evalDoc)
+
         const isValid=this.validate()
 
         if(isValid){
             axios.post('http://localhost:3000/evaluateDoc/submitEvaluated',evalDoc)
+            swal.fire("Inserted", "Student result recorded", "success")
             .then(()=>{
                 this.setState({
                     GroupId:'',
                     documentName:'',
                     grade:'',
                 })
-                swal.fire("Inserted","Student result recorded","success")
+
             }).catch((err)=>{
                 alert(err)
             })
@@ -108,7 +112,7 @@ export default class EvaluateDocument extends Component{
 
                 <form onSubmit={this.onSubmit}>
                     <div className="form-group">
-                        <label for="GroupId" class="form-label">Group Id</label>
+                        <label htmlFor="GroupId" className="form-label">Group Id</label>
                         <input type="text" className="form-control" id="GroupId"
                         placeholder='Please enter Group Id'
                         value={this.state.GroupId}
@@ -116,7 +120,7 @@ export default class EvaluateDocument extends Component{
                         />
                     </div>
                     <div className="form-group">
-                        <label for="documentName" class="form-label">documentName</label>
+                        <label htmlFor="documentName" className="form-label">documentName</label>
                         <input type="text" className="form-control" id="documentName"
                         placeholder='Please enter Group Id'
                         value={this.state.documentName}
@@ -124,8 +128,8 @@ export default class EvaluateDocument extends Component{
                         />
                     </div>
                     <div className="form-group">
-                        <label for="Grade" class="form-label">Grade</label>
-                        <select class="form-select" aria-label="Default select example">
+                        <label htmlFor="Grade" className="form-label ms-4">Grade</label>
+                        <Form.Select className="form-select" aria-label="Default select example" value={this.state.grade} onChange={this.onChangeGrade}>
                             <option value="A+">A+</option>
                             <option value="A">A</option>
                             <option value="A-">A-</option>
@@ -136,8 +140,11 @@ export default class EvaluateDocument extends Component{
                             <option value="C">C</option>
                             <option value="C-">C-</option>
                             
-                        </select>
+                        </Form.Select>
                     </div>
+                    <center>
+                        <button type="submit" className="btn btn-primary">Submit</button>
+                    </center>
                 </form>
 
             </div>

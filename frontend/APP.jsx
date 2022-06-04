@@ -3,6 +3,7 @@ import { BrowserRouter as Router,Route, Routes } from "react-router-dom";
 import Chat from './components/Chat'
 import Join from './components/Join'
 import AcceptTopic from './components/AcceptTopic'
+import EvaluateDocument from "./components/EvaluateDocument";
 
 export default class App extends Component{
 
@@ -22,7 +23,10 @@ export default class App extends Component{
                     <Route path="/chat" exact element={<Chat/>}/>
                 </Routes>
                 <Routes>
-                <Route path="/accTopic" exact element={<AcceptTopic/>}/>
+                    <Route path="/accTopic" exact element={<AcceptTopic/>}/>
+                </Routes>
+                <Routes>
+                    <Route path="/evalDoc" exact element={<EvaluateDocument/>}/>
                 </Routes>
             </Router>
         )

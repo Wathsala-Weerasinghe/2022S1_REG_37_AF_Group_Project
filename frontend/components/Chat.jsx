@@ -80,9 +80,12 @@ const Chat=({location})=>{
                         return(
                             <div key={i}>
                                 <div>
-                                    <div className="message-content">
+                                    {/*<div className="message-content">
                                         <p>{message.text}</p>
-                                    </div>
+                                    </div>*/}
+                                    <ul className="list-group">
+                                        <li className="list-group-item">{message.text}</li>
+                                    </ul>
                                 </div>
                             </div>
                         )

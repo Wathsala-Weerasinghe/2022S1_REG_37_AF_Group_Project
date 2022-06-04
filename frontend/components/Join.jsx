@@ -29,14 +29,14 @@ export default class Join extends Component{
 
     render(){
         return(
-            <div>
+            <div className="m-5" style={{backgroundColor:"rgb(200,200,200,0.5)", padding:"20px 50px 20px 50px", marginTop:"50px",marginBottom:"50px", borderRadius:"30px"}}>
                 <div>
                     <h1>Join</h1>
-                    <div>
-                        <input placeholder='IT Number' type="text" onChange={this.onChangeItNumner}></input>
+                    <div className="mb-3">
+                        <input placeholder='IT Number' className="form-control" type="text" onChange={this.onChangeItNumner}></input>
                     </div>
                     <div>
-                        <input placeholder='Room Id' type="text" onChange={this.onChangeRoomId}></input>
+                        <input placeholder='Room Id' className="form-control" type="text" onChange={this.onChangeRoomId}></input>
                     </div>
                     <Link onClick={this.validate} to={`/chat?itNumber=${this.state.itNumber}&roomId=${this.state.roomId}`}>
                         <button type='submit' value="Sign In">Sign In</button>

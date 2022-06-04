@@ -23,7 +23,7 @@ export default class AcceptTopic extends Component{
     }
 
     componentDidMount(){
-        axios.get('http://localhost:8070/register/c/'+this.props.match.params.id)
+        axios.get('')
         .then(res=>{
             this.setState({
                 GroupName:res.data.GroupName,
@@ -38,14 +38,20 @@ export default class AcceptTopic extends Component{
         })
     }
 
-    onChangeComment=(e)=>{
-        this.setState=({
-            Comment: e.target.value
+    onChangeComment=(e)=> {
+        const {name,value}=e.target
+        console.log(name)
+        console.log(value)
+        this.setState({
+            [name]:value
         })
-        console.log(this.state.Comment)
+
     }
+        
+
 
     onChangeStatus=(e)=>{
+        console.log(e.target.value)
         this.setState({
             Status: e.target.value
         })
@@ -94,45 +100,20 @@ export default class AcceptTopic extends Component{
 
         if(isValid){
 
-            if(this.state.Comment === 'accept'){
-                axios.post('http://localhost:3000/acceptTopic/accept',acceptTopic)
-                .then(()=>{
-                    this.setState({
-                        GroupName:'',
-                        GroupId:'',
-                        tel:'',
-                        TopicCategory:'',
-                        TopicName:'',
-                        Status:'',
-                        Comment:'',
+            console.log(this.state.Status)
 
-                    })
-                    swal.fire("Inserted","Student response recorded","success")
-                    window.location='/'
-                }).catch((err)=>{
-                    alert(err)
-                })
+            if(this.state.Status === 'accept'){
+                axios.post('http://localhost:3000/acceptTopic/accept', acceptTopic)
+                    .then(res=> console.log(res.data))
+                swal.fire("Inserted","Student response recorded","success").then(()=>window.location='/evalDoc')
 
-            }else if(this.state.Comment === 'reject'){
+            }else if(this.state.Status === 'reject'){
                 axios.post('http://localhost:3000/acceptTopic/reject',acceptTopic)
-                .then(()=>{
-                    this.setState({
-                        GroupName:'',
-                        GroupId:'',
-                        tel:'',
-                        TopicCategory:'',
-                        TopicName:'',
-                        Status:'',
-                        Comment:'',
+                    .then(res=> console.log(res.data))
+                swal.fire("Inserted", "Student response recorded", "success").then(()=>window.location='evalDoc')
 
-                    })
-                    swal.fire("Inserted","Student response recorded","success")
-                    window.location='/'
-                }).catch((err)=>{
-                    alert(err)
-                })
+                }
 
-            }
 
         }
 
@@ -146,58 +127,74 @@ export default class AcceptTopic extends Component{
                 <h3><b>{this.state.GroupName}</b></h3>
                 <form onSubmit={this.onSubmit}>
                     <div className="form-group">
-                        <label for="grpName" className="form-label">Group Name</label>
+                        <label htmlFor="grpName" className="form-label">Group Name</label>
                         <input type="text" className="form-control" id="grpName"
                         value={this.state.GroupName}
                         disabled
                         />
                     </div>
                     <div className="form-group">
-                        <label for="grpId" className="form-label">Group Id</label>
+                        <label htmlFor="grpId" className="form-label">Group Id</label>
                         <input type="text" className="form-control" id="grpId"
                         value={this.state.GroupId}
                         disabled
                         />
                     </div>
                     <div className="form-group">
-                        <label for="tel" className="form-label">Contact number</label>
+                        <label htmlFor="tel" className="form-label">Contact number</label>
                         <input type="text" className="form-control" id="tel"
                         value={this.state.tel}
                         disabled
                         />
                     </div>
                     <div className="form-group">
-                        <label for="TopicCategory" className="form-label">Topic Category</label>
+                        <label htmlFor="TopicCategory" className="form-label">Topic Category</label>
                         <input type="text" className="form-control" id="TopicCategory"
                         value={this.state.TopicCategory}
                         disabled
                         />
                     </div>
                     <div className="form-group">
-                        <label for="TopicName" className="form-label">Topic Name</label>
+                        <label htmlFor="TopicName" className="form-label">Topic Name</label>
                         <input type="text" className="form-control" id="TopicName"
                         value={this.state.TopicName}
                         disabled
                         />
                     </div>
                     <div className="form-group">
-                        <label for="TopicCategory" className="form-label">Comment</label>
-                        <textarea className="form-control" rows="3" value={this.state.Comment} onChange={this.onChangeComment}></textarea>
+                        <label htmlFor="TopicCategory" className="form-label">Comment</label>
+                        <textarea className="form-control" rows="3" name="Comment" value={this.state.Comment} onChange={e=>this.onChangeComment(e)}></textarea>
                         <div style={{color:"red"}}>
                             {this.state.CommentError}
                         </div>
                     </div>
-                    <div className="form-check" onChange={this.onChangeStatus}>
-                        <input type="radio" className="form-check-input" id="flexRadioDefault1" name="topic" value="accept"/> 
-                        <label class="form-check-label" for="flexRadioDefault1">
+                    <div >
+                        {/*<input type="radio" className="form-check-input" id="flexRadioDefault1" name="topic" value="accept"/>
+                        <label className="form-check-label" htmlFor="flexRadioDefault1">
                             Accept    
                         </label>
-                        <input type="radio" className="form-check-input" name="topic" value="reject"/>
-                        <label class="form-check-label" for="flexRadioDefault1">
+                        <input type="radio" className="form-check-input" name="topic" value="reject"/><br/>
+                        <label className="form-check-label" htmlFor="flexRadioDefault1">
                             Reject 
                         </label> 
                         <div style={{color:"red"}}>
                             {this.state.StatusError}
+                        </div>*/}
+                        <div className="form-check form-check-inline">
+                            <input className="form-check-input" type="radio" name="topic" id="inlineRadio1"
+                                   value="accept"
+                                   onChange={this.onChangeStatus}
+                                   checked={this.state.Status==="accept"}
+                            />
+                                <label className="form-check-label" htmlFor="inlineRadio1">Accept</label>
+                        </div>
+                        <div className="form-check form-check-inline">
+                            <input className="form-check-input" type="radio" name="topic" id="inlineRadio2"
+                                   value="reject"
+                                   onChange={this.onChangeStatus}
+                                   checked={this.state.Status==="reject"}
+                            />
+                                <label className="form-check-label" htmlFor="inlineRadio2">Reject</label>
                         </div>
                     </div>
                     <div className="form-group" align="center">
