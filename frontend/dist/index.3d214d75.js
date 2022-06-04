@@ -26996,6 +26996,10 @@ var _updateUser = require("./components/admin/UpdateUser");
 var _updateUserDefault = parcelHelpers.interopDefault(_updateUser);
 var _deleteUser = require("./components/admin/DeleteUser");
 var _deleteUserDefault = parcelHelpers.interopDefault(_deleteUser);
+var _viewEvaluation = require("./components/panel-member/ViewEvaluation");
+var _viewEvaluationDefault = parcelHelpers.interopDefault(_viewEvaluation);
+var _evaluation = require("./components/panel-member/Evaluation");
+var _evaluationDefault = parcelHelpers.interopDefault(_evaluation);
 var _appCss = require("./App.css");
 function App() {
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -27011,7 +27015,7 @@ function App() {
                             element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _homeDefault.default), {}, void 0, false, void 0, void 0)
                         }, void 0, false, {
                             fileName: "src/App.js",
-                            lineNumber: 20,
+                            lineNumber: 22,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
@@ -27019,7 +27023,7 @@ function App() {
                             element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _registerDefault.default), {}, void 0, false, void 0, void 0)
                         }, void 0, false, {
                             fileName: "src/App.js",
-                            lineNumber: 21,
+                            lineNumber: 23,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
@@ -27027,7 +27031,7 @@ function App() {
                             element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _loginDefault.default), {}, void 0, false, void 0, void 0)
                         }, void 0, false, {
                             fileName: "src/App.js",
-                            lineNumber: 22,
+                            lineNumber: 24,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
@@ -27035,7 +27039,7 @@ function App() {
                             element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _userDefault.default), {}, void 0, false, void 0, void 0)
                         }, void 0, false, {
                             fileName: "src/App.js",
-                            lineNumber: 24,
+                            lineNumber: 26,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
@@ -27043,7 +27047,7 @@ function App() {
                             element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _updateUserDefault.default), {}, void 0, false, void 0, void 0)
                         }, void 0, false, {
                             fileName: "src/App.js",
-                            lineNumber: 25,
+                            lineNumber: 27,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
@@ -27051,28 +27055,44 @@ function App() {
                             element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _deleteUserDefault.default), {}, void 0, false, void 0, void 0)
                         }, void 0, false, {
                             fileName: "src/App.js",
-                            lineNumber: 26,
+                            lineNumber: 28,
+                            columnNumber: 13
+                        }, this),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
+                            path: "pm-evaluations",
+                            element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _viewEvaluationDefault.default), {}, void 0, false, void 0, void 0)
+                        }, void 0, false, {
+                            fileName: "src/App.js",
+                            lineNumber: 30,
+                            columnNumber: 13
+                        }, this),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
+                            path: "pm-evaluation/:id",
+                            element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _evaluationDefault.default), {}, void 0, false, void 0, void 0)
+                        }, void 0, false, {
+                            fileName: "src/App.js",
+                            lineNumber: 31,
                             columnNumber: 13
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "src/App.js",
-                    lineNumber: 19,
+                    lineNumber: 21,
                     columnNumber: 11
                 }, this)
             }, void 0, false, {
                 fileName: "src/App.js",
-                lineNumber: 18,
+                lineNumber: 20,
                 columnNumber: 9
             }, this)
         }, void 0, false, {
             fileName: "src/App.js",
-            lineNumber: 17,
+            lineNumber: 19,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "src/App.js",
-        lineNumber: 16,
+        lineNumber: 18,
         columnNumber: 5
     }, this);
 }
@@ -27086,7 +27106,7 @@ $RefreshReg$(_c, "App");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react-router-dom":"fdOAw","./components/Layout":"fWo3H","./components/Home":"hcu4N","./components/Register":"2GPnp","./components/Login":"hsmcH","./components/User":"4iQHT","./components/admin/UpdateUser":"a6dxb","./components/admin/DeleteUser":"5oL52","./App.css":"6n0o6","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"fdOAw":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react-router-dom":"fdOAw","./components/Layout":"fWo3H","./components/Home":"hcu4N","./components/Register":"2GPnp","./components/Login":"hsmcH","./components/User":"4iQHT","./components/admin/UpdateUser":"a6dxb","./components/admin/DeleteUser":"5oL52","./components/panel-member/ViewEvaluation":"2WXMx","./components/panel-member/Evaluation":"5ZtKP","./App.css":"6n0o6","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"fdOAw":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "MemoryRouter", ()=>(0, _reactRouter.MemoryRouter));
@@ -28838,7 +28858,8 @@ class Layout extends (0, _reactDefault.default).Component {
                 home: false,
                 logout: false,
                 username: false,
-                users: false
+                users: false,
+                pmEvaluation: false
             }
         };
         // register
@@ -28853,9 +28874,11 @@ class Layout extends (0, _reactDefault.default).Component {
         }
         let role = sessionStorage.getItem("userrole");
         if (role) {
-            if (role === "customer") this.state.links.booking = true;
-            else if (role === "movie-admin") ;
-            else if (role === "system-admin") this.state.links.users = true;
+            if (role === "admin") this.state.links.users = true;
+            else if (role === "student") ;
+            else if (role === "supervisor") ;
+            else if (role === "co-supervisor") ;
+            else if (role === "panel-member") this.state.links.pmEvaluation = true;
         }
     }
     getItemCount() {
@@ -28896,7 +28919,7 @@ class Layout extends (0, _reactDefault.default).Component {
                                     children: "RPMS"
                                 }, void 0, false, {
                                     fileName: "src/components/Layout.js",
-                                    lineNumber: 82,
+                                    lineNumber: 87,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -28904,106 +28927,40 @@ class Layout extends (0, _reactDefault.default).Component {
                                     id: "navbarNav",
                                     children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
                                         className: "navbar-nav",
-                                        children: [
-                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                                                children: this.state.links.users && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
+                                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                                            children: [
+                                                this.state.links.users && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
                                                     className: "nav-item nav-link",
                                                     to: "/users",
                                                     children: "Users"
                                                 }, void 0, false, {
                                                     fileName: "src/components/Layout.js",
-                                                    lineNumber: 92,
+                                                    lineNumber: 97,
                                                     columnNumber: 23
-                                                }, this)
-                                            }, void 0, false, {
-                                                fileName: "src/components/Layout.js",
-                                                lineNumber: 90,
-                                                columnNumber: 19
-                                            }, this),
-                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                                                children: this.state.links.movies && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
+                                                }, this),
+                                                this.state.links.pmEvaluation && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
                                                     className: "nav-item nav-link",
-                                                    to: "/movies",
-                                                    children: "Movies"
+                                                    to: "/pm-evaluations",
+                                                    children: "Evaluation"
                                                 }, void 0, false, {
                                                     fileName: "src/components/Layout.js",
-                                                    lineNumber: 99,
+                                                    lineNumber: 102,
                                                     columnNumber: 23
                                                 }, this)
-                                            }, void 0, false, {
-                                                fileName: "src/components/Layout.js",
-                                                lineNumber: 97,
-                                                columnNumber: 19
-                                            }, this),
-                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                                                children: this.state.links.theaters && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
-                                                    className: "nav-item nav-link",
-                                                    to: "/theaters",
-                                                    children: "Theaters"
-                                                }, void 0, false, {
-                                                    fileName: "src/components/Layout.js",
-                                                    lineNumber: 106,
-                                                    columnNumber: 23
-                                                }, this)
-                                            }, void 0, false, {
-                                                fileName: "src/components/Layout.js",
-                                                lineNumber: 104,
-                                                columnNumber: 19
-                                            }, this),
-                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                                                children: this.state.links.tickets && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
-                                                    className: "nav-item nav-link",
-                                                    to: "/tickets",
-                                                    children: "Tickets"
-                                                }, void 0, false, {
-                                                    fileName: "src/components/Layout.js",
-                                                    lineNumber: 113,
-                                                    columnNumber: 23
-                                                }, this)
-                                            }, void 0, false, {
-                                                fileName: "src/components/Layout.js",
-                                                lineNumber: 111,
-                                                columnNumber: 19
-                                            }, this),
-                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                                                children: this.state.links.booking && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
-                                                    className: "nav-item nav-link",
-                                                    to: "/book-tickets",
-                                                    children: "Booking"
-                                                }, void 0, false, {
-                                                    fileName: "src/components/Layout.js",
-                                                    lineNumber: 120,
-                                                    columnNumber: 23
-                                                }, this)
-                                            }, void 0, false, {
-                                                fileName: "src/components/Layout.js",
-                                                lineNumber: 118,
-                                                columnNumber: 19
-                                            }, this),
-                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                                                children: this.state.links.reservations && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
-                                                    className: "nav-item nav-link",
-                                                    to: "/reservations",
-                                                    children: "Reservations"
-                                                }, void 0, false, {
-                                                    fileName: "src/components/Layout.js",
-                                                    lineNumber: 127,
-                                                    columnNumber: 23
-                                                }, this)
-                                            }, void 0, false, {
-                                                fileName: "src/components/Layout.js",
-                                                lineNumber: 125,
-                                                columnNumber: 19
-                                            }, this)
-                                        ]
-                                    }, void 0, true, {
+                                            ]
+                                        }, void 0, true, {
+                                            fileName: "src/components/Layout.js",
+                                            lineNumber: 95,
+                                            columnNumber: 19
+                                        }, this)
+                                    }, void 0, false, {
                                         fileName: "src/components/Layout.js",
-                                        lineNumber: 86,
+                                        lineNumber: 91,
                                         columnNumber: 17
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "src/components/Layout.js",
-                                    lineNumber: 85,
+                                    lineNumber: 90,
                                     columnNumber: 15
                                 }, this),
                                 this.state.links.viewcart && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
@@ -29022,13 +28979,13 @@ class Layout extends (0, _reactDefault.default).Component {
                                             ]
                                         }, void 0, true, {
                                             fileName: "src/components/Layout.js",
-                                            lineNumber: 137,
+                                            lineNumber: 112,
                                             columnNumber: 19
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "src/components/Layout.js",
-                                    lineNumber: 135,
+                                    lineNumber: 110,
                                     columnNumber: 17
                                 }, this),
                                 "\xa0\xa0",
@@ -29037,7 +28994,7 @@ class Layout extends (0, _reactDefault.default).Component {
                                     children: this.getUserName()
                                 }, void 0, false, {
                                     fileName: "src/components/Layout.js",
-                                    lineNumber: 144,
+                                    lineNumber: 119,
                                     columnNumber: 17
                                 }, this),
                                 this.state.links.logout && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
@@ -29047,44 +29004,44 @@ class Layout extends (0, _reactDefault.default).Component {
                                     children: "Sign Out"
                                 }, void 0, false, {
                                     fileName: "src/components/Layout.js",
-                                    lineNumber: 147,
+                                    lineNumber: 122,
                                     columnNumber: 17
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "src/components/Layout.js",
-                            lineNumber: 81,
+                            lineNumber: 86,
                             columnNumber: 13
                         }, this)
                     }, void 0, false, {
                         fileName: "src/components/Layout.js",
-                        lineNumber: 80,
+                        lineNumber: 85,
                         columnNumber: 11
                     }, this)
                 }, void 0, false, {
                     fileName: "src/components/Layout.js",
-                    lineNumber: 79,
+                    lineNumber: 84,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
                     fileName: "src/components/Layout.js",
-                    lineNumber: 158,
+                    lineNumber: 133,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Outlet), {}, void 0, false, {
                     fileName: "src/components/Layout.js",
-                    lineNumber: 159,
+                    lineNumber: 134,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
                     fileName: "src/components/Layout.js",
-                    lineNumber: 160,
+                    lineNumber: 135,
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "src/components/Layout.js",
-            lineNumber: 78,
+            lineNumber: 83,
             columnNumber: 7
         }, this);
     }
@@ -30376,7 +30333,7 @@ class Register extends (0, _reactDefault.default).Component {
             payload = this.state.staffInfo;
         }
         console.log(payload);
-        (0, _axiosDefault.default).post(`http://localhost:8070/user/signup`, payload).then(function(response) {
+        (0, _axiosDefault.default).post(`http://localhost:8070/users/signup`, payload).then(function(response) {
             alert(response.data.message);
             console.log(response);
         }).catch(function(error) {
@@ -33793,7 +33750,7 @@ function Login() {
         userCred[e.target.name] = e.target.value;
     }
     function signIn() {
-        (0, _axiosDefault.default).post(`http://localhost:8070/user/signin`, userCred).then(function(response) {
+        (0, _axiosDefault.default).post(`http://localhost:8070/users/signin`, userCred).then(function(response) {
             console.log(response);
             if (response.data !== null && response.data.status) {
                 sessionStorage.setItem("token", response.data.token);
@@ -33804,7 +33761,7 @@ function Login() {
                 if (role === "student") window.location = "/home";
                 else if (role === "supervisor") window.location = "/home";
                 else if (role === "co-supervisor") window.location = "/home";
-                else if (role === "panel-member") window.location = "/home";
+                else if (role === "panel-member") window.location = "/pm-evaluations";
                 else if (role === "admin") window.location = "/users";
                 else window.location = "/home";
             } else alert(response.data.message);
@@ -33938,7 +33895,7 @@ class ViewUser extends (0, _reactDefault.default).Component {
         if (this.first) return;
         this.first = true;
         var token = sessionStorage.getItem("token");
-        (0, _axiosDefault.default).get(`http://localhost:8070/user/`, {
+        (0, _axiosDefault.default).get(`http://localhost:8070/users/`, {
             headers: {
                 Authorization: token
             }
@@ -34185,7 +34142,7 @@ class UpdateUser extends (0, _reactDefault.default).Component {
         this.first = true;
         let id = this.props.params.id;
         var token = sessionStorage.getItem("token");
-        (0, _axiosDefault.default).get(`http://localhost:8070/user/` + id, {
+        (0, _axiosDefault.default).get(`http://localhost:8070/users/` + id, {
             headers: {
                 Authorization: token
             }
@@ -34219,7 +34176,7 @@ class UpdateUser extends (0, _reactDefault.default).Component {
         delete this.state.user._id;
         console.log(this.state.user);
         var token = sessionStorage.getItem("token");
-        (0, _axiosDefault.default).put(`http://localhost:8070/user/update/`, this.state.user, {
+        (0, _axiosDefault.default).put(`http://localhost:8070/users/update/`, this.state.user, {
             headers: {
                 Authorization: token
             }
@@ -34503,7 +34460,7 @@ class DeleteUser extends (0, _reactDefault.default).Component {
         this.first = true;
         let id = this.props.params.id;
         var token = sessionStorage.getItem("token");
-        (0, _axiosDefault.default).get(`http://localhost:8070/user/` + id, {
+        (0, _axiosDefault.default).get(`http://localhost:8070/users/` + id, {
             headers: {
                 Authorization: token
             }
@@ -34523,7 +34480,7 @@ class DeleteUser extends (0, _reactDefault.default).Component {
     }
     deleteUser() {
         var token = sessionStorage.getItem("token");
-        (0, _axiosDefault.default).delete(`http://localhost:8070/user/delete` + this.props.params.id, {
+        (0, _axiosDefault.default).delete(`http://localhost:8070/users/delete/` + this.props.params.id, {
             headers: {
                 Authorization: token
             }
@@ -34670,6 +34627,723 @@ exports.default = function(props) {
 };
 
   $parcel$ReactRefreshHelpers$9162.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","axios":"jo6P5","react-router-dom":"fdOAw","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"2WXMx":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$7380 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$7380.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _axios = require("axios");
+var _axiosDefault = parcelHelpers.interopDefault(_axios);
+class ViewEvaluation extends (0, _reactDefault.default).Component {
+    constructor(){
+        super();
+        this.state = {
+            topicDetailDocs: [],
+            presentations: [],
+            marking: {}
+        };
+    }
+    componentDidMount() {
+        if (this.first) return;
+        this.first = true;
+        let userId = sessionStorage.getItem("userid");
+        var token = sessionStorage.getItem("token");
+        (0, _axiosDefault.default).get(`http://localhost:8070/topics/pm/` + userId, {
+            headers: {
+                Authorization: token
+            }
+        }).then((response)=>{
+            this.setState((prevState)=>{
+                let topicDetailDocs = {
+                    ...prevState.topicDetailDocs
+                };
+                topicDetailDocs = response.data.topicDetailDocs;
+                let presentations = {
+                    ...prevState.presentations
+                };
+                presentations = response.data.presentations;
+                return {
+                    topicDetailDocs,
+                    presentations
+                };
+            });
+        }).catch(function(error) {
+            console.log(error);
+        });
+        (0, _axiosDefault.default).get(`http://localhost:8070/marking`, {
+            headers: {
+                Authorization: token
+            }
+        }).then((response)=>{
+            this.setState((prevState)=>{
+                let marking = {
+                    ...prevState.marking
+                };
+                marking = response.data.marking;
+                return {
+                    marking
+                };
+            });
+        }).catch(function(error) {
+            console.log(error);
+        });
+    }
+    render() {
+        return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+            children: [
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("table", {
+                    className: "container",
+                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("tbody", {
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("tr", {
+                            children: [
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("td", {
+                                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h5", {
+                                        children: "Pending Topics to Evaluate"
+                                    }, void 0, false, {
+                                        fileName: "src/components/panel-member/ViewEvaluation.js",
+                                        lineNumber: 67,
+                                        columnNumber: 19
+                                    }, this)
+                                }, void 0, false, {
+                                    fileName: "src/components/panel-member/ViewEvaluation.js",
+                                    lineNumber: 67,
+                                    columnNumber: 15
+                                }, this),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("td", {
+                                    className: "float-right",
+                                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
+                                        className: "btn btn-warning",
+                                        href: this.state.marking?.topicdetail,
+                                        children: "View Marking Scheme"
+                                    }, void 0, false, {
+                                        fileName: "src/components/panel-member/ViewEvaluation.js",
+                                        lineNumber: 69,
+                                        columnNumber: 17
+                                    }, this)
+                                }, void 0, false, {
+                                    fileName: "src/components/panel-member/ViewEvaluation.js",
+                                    lineNumber: 68,
+                                    columnNumber: 15
+                                }, this)
+                            ]
+                        }, void 0, true, {
+                            fileName: "src/components/panel-member/ViewEvaluation.js",
+                            lineNumber: 66,
+                            columnNumber: 13
+                        }, this)
+                    }, void 0, false, {
+                        fileName: "src/components/panel-member/ViewEvaluation.js",
+                        lineNumber: 65,
+                        columnNumber: 11
+                    }, this)
+                }, void 0, false, {
+                    fileName: "src/components/panel-member/ViewEvaluation.js",
+                    lineNumber: 64,
+                    columnNumber: 9
+                }, this),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("hr", {}, void 0, false, {
+                    fileName: "src/components/panel-member/ViewEvaluation.js",
+                    lineNumber: 79,
+                    columnNumber: 9
+                }, this),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("table", {
+                        className: "table table-striped",
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("thead", {
+                                className: "thead-dark",
+                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("tr", {
+                                    children: [
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("th", {
+                                            children: "Topic Name"
+                                        }, void 0, false, {
+                                            fileName: "src/components/panel-member/ViewEvaluation.js",
+                                            lineNumber: 84,
+                                            columnNumber: 17
+                                        }, this),
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("th", {
+                                            children: "Group Name"
+                                        }, void 0, false, {
+                                            fileName: "src/components/panel-member/ViewEvaluation.js",
+                                            lineNumber: 85,
+                                            columnNumber: 17
+                                        }, this),
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("th", {
+                                            children: "Group Id"
+                                        }, void 0, false, {
+                                            fileName: "src/components/panel-member/ViewEvaluation.js",
+                                            lineNumber: 86,
+                                            columnNumber: 17
+                                        }, this),
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("th", {
+                                            children: "Topic Category"
+                                        }, void 0, false, {
+                                            fileName: "src/components/panel-member/ViewEvaluation.js",
+                                            lineNumber: 87,
+                                            columnNumber: 17
+                                        }, this),
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("th", {
+                                            className: "command-col-large",
+                                            children: "#"
+                                        }, void 0, false, {
+                                            fileName: "src/components/panel-member/ViewEvaluation.js",
+                                            lineNumber: 88,
+                                            columnNumber: 17
+                                        }, this)
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "src/components/panel-member/ViewEvaluation.js",
+                                    lineNumber: 83,
+                                    columnNumber: 15
+                                }, this)
+                            }, void 0, false, {
+                                fileName: "src/components/panel-member/ViewEvaluation.js",
+                                lineNumber: 82,
+                                columnNumber: 13
+                            }, this),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("tbody", {
+                                children: this.state.topicDetailDocs?.map((item)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("tr", {
+                                        children: [
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("td", {
+                                                children: item.TopicName
+                                            }, void 0, false, {
+                                                fileName: "src/components/panel-member/ViewEvaluation.js",
+                                                lineNumber: 94,
+                                                columnNumber: 19
+                                            }, this),
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("td", {
+                                                children: item.GroupName
+                                            }, void 0, false, {
+                                                fileName: "src/components/panel-member/ViewEvaluation.js",
+                                                lineNumber: 95,
+                                                columnNumber: 19
+                                            }, this),
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("td", {
+                                                children: item.GroupID
+                                            }, void 0, false, {
+                                                fileName: "src/components/panel-member/ViewEvaluation.js",
+                                                lineNumber: 96,
+                                                columnNumber: 19
+                                            }, this),
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("td", {
+                                                children: item.TopicCategory
+                                            }, void 0, false, {
+                                                fileName: "src/components/panel-member/ViewEvaluation.js",
+                                                lineNumber: 97,
+                                                columnNumber: 19
+                                            }, this),
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("td", {
+                                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
+                                                    className: "btn btn-primary",
+                                                    href: "pm-evaluation/" + item._id,
+                                                    children: "Evaluate"
+                                                }, void 0, false, {
+                                                    fileName: "src/components/panel-member/ViewEvaluation.js",
+                                                    lineNumber: 99,
+                                                    columnNumber: 21
+                                                }, this)
+                                            }, void 0, false, {
+                                                fileName: "src/components/panel-member/ViewEvaluation.js",
+                                                lineNumber: 98,
+                                                columnNumber: 19
+                                            }, this)
+                                        ]
+                                    }, item._id, true, {
+                                        fileName: "src/components/panel-member/ViewEvaluation.js",
+                                        lineNumber: 93,
+                                        columnNumber: 17
+                                    }, this))
+                            }, void 0, false, {
+                                fileName: "src/components/panel-member/ViewEvaluation.js",
+                                lineNumber: 91,
+                                columnNumber: 13
+                            }, this)
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/components/panel-member/ViewEvaluation.js",
+                        lineNumber: 81,
+                        columnNumber: 9
+                    }, this)
+                }, void 0, false, {
+                    fileName: "src/components/panel-member/ViewEvaluation.js",
+                    lineNumber: 80,
+                    columnNumber: 9
+                }, this),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
+                    fileName: "src/components/panel-member/ViewEvaluation.js",
+                    lineNumber: 111,
+                    columnNumber: 9
+                }, this),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
+                    fileName: "src/components/panel-member/ViewEvaluation.js",
+                    lineNumber: 111,
+                    columnNumber: 15
+                }, this),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
+                    fileName: "src/components/panel-member/ViewEvaluation.js",
+                    lineNumber: 111,
+                    columnNumber: 21
+                }, this),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("table", {
+                    className: "container",
+                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("tbody", {
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("tr", {
+                            children: [
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("td", {
+                                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h5", {
+                                        children: "Pending Presentations to Evaluate"
+                                    }, void 0, false, {
+                                        fileName: "src/components/panel-member/ViewEvaluation.js",
+                                        lineNumber: 115,
+                                        columnNumber: 19
+                                    }, this)
+                                }, void 0, false, {
+                                    fileName: "src/components/panel-member/ViewEvaluation.js",
+                                    lineNumber: 115,
+                                    columnNumber: 15
+                                }, this),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("td", {
+                                    className: "float-right",
+                                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
+                                        className: "btn btn-warning",
+                                        href: this.state.marking?.presentation,
+                                        children: "View Marking Scheme"
+                                    }, void 0, false, {
+                                        fileName: "src/components/panel-member/ViewEvaluation.js",
+                                        lineNumber: 117,
+                                        columnNumber: 17
+                                    }, this)
+                                }, void 0, false, {
+                                    fileName: "src/components/panel-member/ViewEvaluation.js",
+                                    lineNumber: 116,
+                                    columnNumber: 15
+                                }, this)
+                            ]
+                        }, void 0, true, {
+                            fileName: "src/components/panel-member/ViewEvaluation.js",
+                            lineNumber: 114,
+                            columnNumber: 13
+                        }, this)
+                    }, void 0, false, {
+                        fileName: "src/components/panel-member/ViewEvaluation.js",
+                        lineNumber: 113,
+                        columnNumber: 11
+                    }, this)
+                }, void 0, false, {
+                    fileName: "src/components/panel-member/ViewEvaluation.js",
+                    lineNumber: 112,
+                    columnNumber: 9
+                }, this),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("hr", {}, void 0, false, {
+                    fileName: "src/components/panel-member/ViewEvaluation.js",
+                    lineNumber: 127,
+                    columnNumber: 9
+                }, this),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("table", {
+                        className: "table table-striped",
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("thead", {
+                                className: "thead-dark",
+                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("tr", {
+                                    children: [
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("th", {
+                                            children: "Topic Name"
+                                        }, void 0, false, {
+                                            fileName: "src/components/panel-member/ViewEvaluation.js",
+                                            lineNumber: 132,
+                                            columnNumber: 17
+                                        }, this),
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("th", {
+                                            children: "Group Name"
+                                        }, void 0, false, {
+                                            fileName: "src/components/panel-member/ViewEvaluation.js",
+                                            lineNumber: 133,
+                                            columnNumber: 17
+                                        }, this),
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("th", {
+                                            children: "Group Id"
+                                        }, void 0, false, {
+                                            fileName: "src/components/panel-member/ViewEvaluation.js",
+                                            lineNumber: 134,
+                                            columnNumber: 17
+                                        }, this),
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("th", {
+                                            children: "Topic Category"
+                                        }, void 0, false, {
+                                            fileName: "src/components/panel-member/ViewEvaluation.js",
+                                            lineNumber: 135,
+                                            columnNumber: 17
+                                        }, this),
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("th", {
+                                            className: "command-col-large",
+                                            children: "#"
+                                        }, void 0, false, {
+                                            fileName: "src/components/panel-member/ViewEvaluation.js",
+                                            lineNumber: 136,
+                                            columnNumber: 17
+                                        }, this)
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "src/components/panel-member/ViewEvaluation.js",
+                                    lineNumber: 131,
+                                    columnNumber: 15
+                                }, this)
+                            }, void 0, false, {
+                                fileName: "src/components/panel-member/ViewEvaluation.js",
+                                lineNumber: 130,
+                                columnNumber: 13
+                            }, this),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("tbody", {
+                                children: this.state.presentations?.map((item)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("tr", {
+                                        children: [
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("td", {
+                                                children: item.TopicName
+                                            }, void 0, false, {
+                                                fileName: "src/components/panel-member/ViewEvaluation.js",
+                                                lineNumber: 142,
+                                                columnNumber: 19
+                                            }, this),
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("td", {
+                                                children: item.GroupName
+                                            }, void 0, false, {
+                                                fileName: "src/components/panel-member/ViewEvaluation.js",
+                                                lineNumber: 143,
+                                                columnNumber: 19
+                                            }, this),
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("td", {
+                                                children: item.GroupID
+                                            }, void 0, false, {
+                                                fileName: "src/components/panel-member/ViewEvaluation.js",
+                                                lineNumber: 144,
+                                                columnNumber: 19
+                                            }, this),
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("td", {
+                                                children: item.TopicCategory
+                                            }, void 0, false, {
+                                                fileName: "src/components/panel-member/ViewEvaluation.js",
+                                                lineNumber: 145,
+                                                columnNumber: 19
+                                            }, this),
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("td", {
+                                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
+                                                    className: "btn btn-primary",
+                                                    href: "pm-evaluation/" + item._id,
+                                                    children: "Evaluate"
+                                                }, void 0, false, {
+                                                    fileName: "src/components/panel-member/ViewEvaluation.js",
+                                                    lineNumber: 147,
+                                                    columnNumber: 21
+                                                }, this)
+                                            }, void 0, false, {
+                                                fileName: "src/components/panel-member/ViewEvaluation.js",
+                                                lineNumber: 146,
+                                                columnNumber: 19
+                                            }, this)
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "src/components/panel-member/ViewEvaluation.js",
+                                        lineNumber: 141,
+                                        columnNumber: 17
+                                    }, this))
+                            }, void 0, false, {
+                                fileName: "src/components/panel-member/ViewEvaluation.js",
+                                lineNumber: 139,
+                                columnNumber: 13
+                            }, this)
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/components/panel-member/ViewEvaluation.js",
+                        lineNumber: 129,
+                        columnNumber: 9
+                    }, this)
+                }, void 0, false, {
+                    fileName: "src/components/panel-member/ViewEvaluation.js",
+                    lineNumber: 128,
+                    columnNumber: 9
+                }, this)
+            ]
+        }, void 0, true, {
+            fileName: "src/components/panel-member/ViewEvaluation.js",
+            lineNumber: 63,
+            columnNumber: 7
+        }, this);
+    }
+}
+exports.default = ViewEvaluation;
+
+  $parcel$ReactRefreshHelpers$7380.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","axios":"jo6P5","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"5ZtKP":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$95fd = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$95fd.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _axios = require("axios");
+var _axiosDefault = parcelHelpers.interopDefault(_axios);
+var _reactRouterDom = require("react-router-dom");
+class PMEvaluation extends (0, _reactDefault.default).Component {
+    constructor(){
+        super();
+        this.state = {
+            topic: {},
+            heading: ""
+        };
+    }
+    componentDidMount() {
+        if (this.first) return;
+        this.first = true;
+        let topicid = this.props.params.id;
+        var token = sessionStorage.getItem("token");
+        (0, _axiosDefault.default).get(`http://localhost:8070/topics/` + topicid, {
+            headers: {
+                Authorization: token
+            }
+        }).then((response)=>{
+            let heading = "";
+            if (response.data.topic.state === "topic-eval-pending") heading = "Evaluate Topic Detail Document";
+            else if (response.data.topic.state === "present-eval-pending") heading = "Evaluate Presentation";
+            this.setState((prevState)=>{
+                let topic = {
+                    ...prevState.topic
+                };
+                topic = response.data.topic;
+                return {
+                    topic,
+                    heading
+                };
+            });
+        }).catch(function(error) {
+            console.log(error);
+        });
+    }
+    handleScoreUpdateChange(e) {
+        this.setState((prevState)=>{
+            let topic = {
+                ...prevState.topic
+            };
+            topic[e.target.name] = e.target.value;
+            return {
+                topic
+            };
+        });
+    }
+    updateScore() {
+        if (this.state.topic.state === "present-eval-pending") {
+            this.state.topic.state = "present-eval-completed";
+            this.state.topic.topicDetScore = this.state.topic.score;
+        } else if (this.state.topic.state === "topic-eval-pending") {
+            this.state.topic.state = "topic-eval-completed";
+            this.state.topic.topicPresentScore = this.state.topic.score;
+        }
+        this.state.topic.id = this.props.params.id;
+        delete this.state.topic._id;
+        delete this.state.topic.score;
+        var token = sessionStorage.getItem("token");
+        //console.log(this.state.topic);
+        (0, _axiosDefault.default).put(`http://localhost:8070/topics/update/`, this.state.topic, {
+            headers: {
+                Authorization: token
+            }
+        }).then((response)=>{
+            console.log(response);
+            this.props.navigation("/pm-evaluations");
+        }).catch((error)=>{
+            console.log(error);
+        });
+    }
+    render() {
+        return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+            children: [
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h5", {
+                    children: this.state?.heading
+                }, void 0, false, {
+                    fileName: "src/components/panel-member/Evaluation.js",
+                    lineNumber: 91,
+                    columnNumber: 9
+                }, this),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("hr", {}, void 0, false, {
+                    fileName: "src/components/panel-member/Evaluation.js",
+                    lineNumber: 92,
+                    columnNumber: 9
+                }, this),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                    children: [
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("table", {
+                            className: "table table-striped tb-500 pad-20",
+                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("tbody", {
+                                children: [
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("tr", {
+                                        children: [
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("td", {
+                                                className: "tb-col-wd-130",
+                                                children: "Topic Name"
+                                            }, void 0, false, {
+                                                fileName: "src/components/panel-member/Evaluation.js",
+                                                lineNumber: 97,
+                                                columnNumber: 15
+                                            }, this),
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("td", {
+                                                className: "tb-col-wd-30",
+                                                children: ": \xa0"
+                                            }, void 0, false, {
+                                                fileName: "src/components/panel-member/Evaluation.js",
+                                                lineNumber: 100,
+                                                columnNumber: 15
+                                            }, this),
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("td", {
+                                                children: this.state.topic?.TopicName
+                                            }, void 0, false, {
+                                                fileName: "src/components/panel-member/Evaluation.js",
+                                                lineNumber: 103,
+                                                columnNumber: 15
+                                            }, this)
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "src/components/panel-member/Evaluation.js",
+                                        lineNumber: 96,
+                                        columnNumber: 13
+                                    }, this),
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("tr", {
+                                        children: [
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("td", {
+                                                children: "Group Name"
+                                            }, void 0, false, {
+                                                fileName: "src/components/panel-member/Evaluation.js",
+                                                lineNumber: 108,
+                                                columnNumber: 15
+                                            }, this),
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("td", {
+                                                children: ":"
+                                            }, void 0, false, {
+                                                fileName: "src/components/panel-member/Evaluation.js",
+                                                lineNumber: 111,
+                                                columnNumber: 15
+                                            }, this),
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("td", {
+                                                children: this.state.topic?.GroupName
+                                            }, void 0, false, {
+                                                fileName: "src/components/panel-member/Evaluation.js",
+                                                lineNumber: 114,
+                                                columnNumber: 15
+                                            }, this)
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "src/components/panel-member/Evaluation.js",
+                                        lineNumber: 107,
+                                        columnNumber: 13
+                                    }, this),
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("tr", {
+                                        children: [
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("td", {
+                                                children: "Score"
+                                            }, void 0, false, {
+                                                fileName: "src/components/panel-member/Evaluation.js",
+                                                lineNumber: 119,
+                                                columnNumber: 15
+                                            }, this),
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("td", {
+                                                children: ":"
+                                            }, void 0, false, {
+                                                fileName: "src/components/panel-member/Evaluation.js",
+                                                lineNumber: 122,
+                                                columnNumber: 15
+                                            }, this),
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("td", {
+                                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                                                    type: "number",
+                                                    name: "score",
+                                                    className: "form-control score-box",
+                                                    onChange: this.handleScoreUpdateChange.bind(this)
+                                                }, void 0, false, {
+                                                    fileName: "src/components/panel-member/Evaluation.js",
+                                                    lineNumber: 126,
+                                                    columnNumber: 15
+                                                }, this)
+                                            }, void 0, false, {
+                                                fileName: "src/components/panel-member/Evaluation.js",
+                                                lineNumber: 125,
+                                                columnNumber: 15
+                                            }, this)
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "src/components/panel-member/Evaluation.js",
+                                        lineNumber: 118,
+                                        columnNumber: 13
+                                    }, this)
+                                ]
+                            }, void 0, true, {
+                                fileName: "src/components/panel-member/Evaluation.js",
+                                lineNumber: 95,
+                                columnNumber: 11
+                            }, this)
+                        }, void 0, false, {
+                            fileName: "src/components/panel-member/Evaluation.js",
+                            lineNumber: 94,
+                            columnNumber: 9
+                        }, this),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                            className: "btn btn-primary tb-500",
+                            type: "button",
+                            name: "btnSaveScore",
+                            value: "Save Marks",
+                            onClick: this.updateScore.bind(this)
+                        }, void 0, false, {
+                            fileName: "src/components/panel-member/Evaluation.js",
+                            lineNumber: 131,
+                            columnNumber: 11
+                        }, this)
+                    ]
+                }, void 0, true, {
+                    fileName: "src/components/panel-member/Evaluation.js",
+                    lineNumber: 93,
+                    columnNumber: 9
+                }, this)
+            ]
+        }, void 0, true, {
+            fileName: "src/components/panel-member/Evaluation.js",
+            lineNumber: 90,
+            columnNumber: 7
+        }, this);
+    }
+}
+// Wrap and export
+exports.default = function(props) {
+    const navigation = (0, _reactRouterDom.useNavigate)();
+    const params = (0, _reactRouterDom.useParams)();
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(PMEvaluation, {
+        ...props,
+        navigation: navigation,
+        params: params
+    }, void 0, false, {
+        fileName: "src/components/panel-member/Evaluation.js",
+        lineNumber: 149,
+        columnNumber: 10
+    }, this);
+};
+
+  $parcel$ReactRefreshHelpers$95fd.postlude(module);
 } finally {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;

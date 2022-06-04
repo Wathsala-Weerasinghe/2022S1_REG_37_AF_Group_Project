@@ -17,7 +17,7 @@ class DeleteUser extends React.Component {
     let id = this.props.params.id;
     var token = sessionStorage.getItem("token");
     axios
-      .get(`http://localhost:8070/user/` + id, {
+      .get(`http://localhost:8070/users/` + id, {
         headers: {
           Authorization: token,
         },
@@ -37,7 +37,7 @@ class DeleteUser extends React.Component {
   deleteUser() {
     var token = sessionStorage.getItem("token");
     axios
-      .delete(`http://localhost:8070/user/delete` + this.props.params.id, {
+      .delete(`http://localhost:8070/users/delete/` + this.props.params.id, {
         headers: {
           Authorization: token,
         },

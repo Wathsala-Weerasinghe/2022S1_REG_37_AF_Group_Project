@@ -16,7 +16,7 @@ class ViewUser extends React.Component {
 
     var token = sessionStorage.getItem("token");
     axios
-      .get(`http://localhost:8070/user/`, {
+      .get(`http://localhost:8070/users/`, {
         headers: {
           Authorization: token,
         },

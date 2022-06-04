@@ -8,6 +8,8 @@ import Login from "./components/Login";
 import User from "./components/User";
 import UpdateUser from "./components/admin/UpdateUser";
 import DeleteUser from "./components/admin/DeleteUser";
+import ViewEvaluation from "./components/panel-member/ViewEvaluation"
+import PMEvaluation from "./components/panel-member/Evaluation"
 
 import "./App.css";
 
@@ -24,6 +26,9 @@ function App() {
             <Route path='users' element={<User />} />
             <Route path='update-user/:id' element={<UpdateUser />} />
             <Route path='delete-user/:id' element={<DeleteUser />} />
+
+            <Route path='pm-evaluations' element={<ViewEvaluation />} />
+            <Route path='pm-evaluation/:id' element={<PMEvaluation />} />
           </Route>
         </Routes>
       </BrowserRouter>

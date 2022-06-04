@@ -50,7 +50,7 @@ function isAuthorized(req, res, next) {
 //app middleware
 app.use(bodyParser.json());
 app.use(cors());
-app.use(isAuthorized);
+//app.use(isAuthorized);
 
 //create connection to mongodb
 const URL = process.env.MONGODB_URL;
@@ -62,9 +62,13 @@ mongoose.connect(URL, (err) => {
 });
 
 //import routes
-const userRouter = require("./routes/UserRoute");
+const userRouter = require("./routes/user-route");
+const topicRouter = require("./routes/topic-route");
+const markingRouter = require("./routes/marking-route");
 
-app.use("/user", userRouter);
+app.use("/users", userRouter);
+app.use("/topics", topicRouter);
+app.use("/marking", markingRouter);
 
 app.get("/", (req, res) => res.send("Service is up and running.."));
 app.get("/version", (req, res) => res.send("1.0.0"));

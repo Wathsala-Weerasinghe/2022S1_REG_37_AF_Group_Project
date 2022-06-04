@@ -8,7 +8,7 @@ function Login() {
 
   function signIn() {
     axios
-      .post(`http://localhost:8070/user/signin`, userCred)
+      .post(`http://localhost:8070/users/signin`, userCred)
       .then(function (response) {
         console.log(response);
         if (response.data !== null && response.data.status) {
@@ -25,7 +25,7 @@ function Login() {
           } else if (role === "co-supervisor") {
             window.location = "/home";
           } else if (role === "panel-member") {
-            window.location = "/home";
+            window.location = "/pm-evaluations";
           } else if (role === "admin") {
             window.location = "/users";
           } else {

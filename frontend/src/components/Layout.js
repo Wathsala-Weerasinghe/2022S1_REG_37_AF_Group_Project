@@ -16,6 +16,7 @@ class Layout extends React.Component {
         logout: false,
         username: false,
         users: false,
+        pmEvaluation: false
       },
     };
 
@@ -33,11 +34,15 @@ class Layout extends React.Component {
     let role = sessionStorage.getItem("userrole");
 
     if (role) {
-      if (role === "customer") {
-        this.state.links.booking = true;
-      } else if (role === "movie-admin") {
-      } else if (role === "system-admin") {
+      if (role === "admin") {
         this.state.links.users = true;
+      } else if (role === "student") {
+      } else if (role === "supervisor") {
+        //this.state.links.users = true;
+      } else if (role === "co-supervisor") {
+        //this.state.links.users = true;
+      } else if (role === "panel-member") {
+        this.state.links.pmEvaluation = true;
       }
     }
   }
@@ -93,39 +98,9 @@ class Layout extends React.Component {
                         Users
                       </Link>
                     )}
-                  </li>
-                  <li>
-                    {this.state.links.movies && (
-                      <Link className='nav-item nav-link' to='/movies'>
-                        Movies
-                      </Link>
-                    )}
-                  </li>
-                  <li>
-                    {this.state.links.theaters && (
-                      <Link className='nav-item nav-link' to='/theaters'>
-                        Theaters
-                      </Link>
-                    )}
-                  </li>
-                  <li>
-                    {this.state.links.tickets && (
-                      <Link className='nav-item nav-link' to='/tickets'>
-                        Tickets
-                      </Link>
-                    )}
-                  </li>
-                  <li>
-                    {this.state.links.booking && (
-                      <Link className='nav-item nav-link' to='/book-tickets'>
-                        Booking
-                      </Link>
-                    )}
-                  </li>
-                  <li>
-                    {this.state.links.reservations && (
-                      <Link className='nav-item nav-link' to='/reservations'>
-                        Reservations
+                    {this.state.links.pmEvaluation && (
+                      <Link className='nav-item nav-link' to='/pm-evaluations'>
+                        Evaluation
                       </Link>
                     )}
                   </li>

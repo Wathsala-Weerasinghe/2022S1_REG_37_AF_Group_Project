@@ -17,7 +17,7 @@ class UpdateUser extends React.Component {
     let id = this.props.params.id;
     var token = sessionStorage.getItem("token");
     axios
-      .get(`http://localhost:8070/user/` + id, {
+      .get(`http://localhost:8070/users/` + id, {
         headers: {
           Authorization: token,
         },
@@ -48,7 +48,7 @@ class UpdateUser extends React.Component {
     console.log(this.state.user);
     var token = sessionStorage.getItem("token");
     axios
-      .put(`http://localhost:8070/user/update/`, this.state.user, {
+      .put(`http://localhost:8070/users/update/`, this.state.user, {
         headers: {
           Authorization: token,
         },

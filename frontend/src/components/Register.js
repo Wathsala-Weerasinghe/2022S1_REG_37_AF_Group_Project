@@ -44,7 +44,7 @@ class Register extends React.Component {
     console.log(payload);
 
     axios
-      .post(`http://localhost:8070/user/signup`, payload)
+      .post(`http://localhost:8070/users/signup`, payload)
       .then(function (response) {
         alert(response.data.message);
         console.log(response);
