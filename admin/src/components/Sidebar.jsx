@@ -43,17 +43,17 @@ function Sidebar() {
               <h3>Markings</h3>
             </Navigation_Link>
           </Link>
-
-          <Link to="/reports">
-            <Navigation_Link>
-              <AiOutlinePieChart />
-              <h3>Submissions</h3>
-            </Navigation_Link>
-          </Link>
           <Link to="/temp">
             <Navigation_Link>
               <AiOutlinePieChart />
               <h3>Templates</h3>
+            </Navigation_Link>
+          </Link>
+
+          <Link to="/submission">
+            <Navigation_Link>
+              <AiOutlinePieChart />
+              <h3>Submissions</h3>
             </Navigation_Link>
           </Link>
         </Links>

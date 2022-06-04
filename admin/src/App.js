@@ -9,6 +9,7 @@ import AddPanelMember from "./pages/AddPanelMember";
 import AddTemplates from "./pages/AddTemplates";
 import AddMarking from "./components/AddMarking";
 import ViewStudentGroups from "./pages/ViewGroups";
+import AddSubmissionTypes from "./pages/AddSubmissions";
 
 function App() {
   return (
@@ -41,6 +42,9 @@ function App() {
 
             <Route path="/AddPanelMember">
               <AddPanelMember />
+            </Route>
+            <Route path="/submission">
+              <AddSubmissionTypes />
             </Route>
           </div>
         </Switch>
