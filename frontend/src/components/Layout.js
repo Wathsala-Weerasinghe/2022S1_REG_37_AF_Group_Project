@@ -16,7 +16,7 @@ class Layout extends React.Component {
         logout: false,
         username: false,
         users: false,
-        pmEvaluation: false
+        pmEvaluation: false,
       },
     };
 
@@ -104,16 +104,15 @@ class Layout extends React.Component {
                       </Link>
                     )}
                   </li>
+                  <li>
+                    {
+                      <Link className='nav-item nav-link' to='/AllTReg'>
+                        All Topic Registration
+                      </Link>
+                    }
+                  </li>
                 </ul>
               </div>
-              {this.state.links.viewcart && (
-                <Link className='btn btn-primary' to='shop-cart'>
-                  Cart{" "}
-                  <span className='badge' id='cart-item-count'>
-                    [{this.getItemCount()}]
-                  </span>
-                </Link>
-              )}
               &nbsp;&nbsp;
               {this.state.links.username && (
                 <span className='login-name'>{this.getUserName()}</span>

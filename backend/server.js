@@ -65,10 +65,12 @@ mongoose.connect(URL, (err) => {
 const userRouter = require("./routes/user-route");
 const topicRouter = require("./routes/topic-route");
 const markingRouter = require("./routes/marking-route");
+const regRouter = require("./routes/reisterTopicRoutes.js");
 
 app.use("/users", userRouter);
 app.use("/topics", topicRouter);
 app.use("/marking", markingRouter);
+app.use("/register", regRouter);
 
 app.get("/", (req, res) => res.send("Service is up and running.."));
 app.get("/version", (req, res) => res.send("1.0.0"));

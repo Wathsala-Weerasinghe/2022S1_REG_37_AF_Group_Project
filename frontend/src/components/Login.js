@@ -19,7 +19,7 @@ function Login() {
 
           let role = response.data.role;
           if (role === "student") {
-            window.location = "/home";
+            window.location = "/student";
           } else if (role === "supervisor") {
             window.location = "/home";
           } else if (role === "co-supervisor") {

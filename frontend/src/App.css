@@ -146,3 +146,49 @@
         font-size: 12em;
     }
 }
+
+/******* custom styles *****/
+.login-form {
+    width: 40%;
+}
+
+.editable-form {
+    width: 50% !important;
+}
+
+.command-col {
+    width: 200px;
+}
+
+.command-col-half {
+    width: 100px;
+}
+
+.score-box {
+    width: 60px !important;
+}
+
+.tb-col-wd-130 {
+    width: 130px !important;
+}
+
+.tb-col-wd-30 {
+    width: 30px !important;
+}
+
+.tb-500 {
+    width: 500px !important;
+    text-align: left;
+}
+
+.pad-20 td {
+    padding: 15px !important;
+}
+
+table {
+    color: #000 !important;
+}
+
+.float-right {
+    float: right !important;
+}
