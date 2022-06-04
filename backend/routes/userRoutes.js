@@ -5,14 +5,22 @@ const {
   updateUserDetails,
   deleteUser,
   getStudents,
+  getStaff,
+  getAdmins,
 } = require("../controllers/userCtrl");
 
-router.route("/getAll").get(getAllUsers);
+router.get("/getAll", getAllUsers);
 
-router.route("/getUserById/:id").get(getUserById);
+router.get("/getUserById/:id", getUserById);
 
-router.route("/updateUserById/:id").patch(updateUserDetails);
+router.patch("/updateUserById/:id", updateUserDetails);
 
-router.route("/deleteUser/:id").delete(deleteUser);
+router.delete("/deleteUser/:id", deleteUser);
 
-router.route("/getStudentsList").get(getStudents);
+router.get("/getStudentsList", getStudents);
+
+router.get("/getAdminsList", getAdmins);
+
+router.get("/getStaffList", getStaff);
+
+module.exports = router;

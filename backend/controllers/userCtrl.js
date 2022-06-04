@@ -57,17 +57,38 @@ const deleteUser = asyncHandler(async (req, res) => {
 
 //Get all students
 const getStudents = asyncHandler(async (req, res) => {
-  const user = await find({ student });
+  const role = "student";
+  const user = await User.find({ role });
 
   if (user) {
     res.json(user);
   }
 });
 
+//Get all staff
+const getStaff = asyncHandler(async (req, res) => {
+  const role = "staff";
+  const user = await User.find({ role });
+
+  if (user) {
+    res.json(user);
+  }
+});
+//Get all admins
+const getAdmins = asyncHandler(async (req, res) => {
+  const role = "admin";
+  const user = await User.find({ role });
+
+  if (user) {
+    res.json(user);
+  }
+});
 module.exports = {
   getAllUsers,
   getUserById,
   updateUserDetails,
   deleteUser,
   getStudents,
+  getStaff,
+  getAdmins,
 };
