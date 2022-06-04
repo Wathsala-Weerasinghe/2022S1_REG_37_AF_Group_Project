@@ -23,14 +23,14 @@ export default class AcceptTopic extends Component{
     }
 
     componentDidMount(){
-        axios.get('')
+        axios.get('http://localhost:8070/register/c/'+this.props.match.params.id)
         .then(res=>{
             this.setState({
-                GroupName:res.data,
-                GroupId:res.data,
-                tel:res.data,
-                TopicCategory:res.data,
-                TopicName:res.data,
+                GroupName:res.data.GroupName,
+                GroupId:res.data.GroupId,
+                tel:res.data.phone,
+                TopicCategory:res.data.TopicCategory,
+                TopicName:res.data.TopicName,
 
             })
         }).catch((err)=>{
