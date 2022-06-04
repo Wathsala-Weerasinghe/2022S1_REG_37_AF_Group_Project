@@ -28889,7 +28889,8 @@ class Layout extends (0, _reactDefault.default).Component {
                 logout: false,
                 username: false,
                 users: false,
-                pmEvaluation: false
+                pmEvaluation: false,
+                alltopics: false
             }
         };
         // register
@@ -28905,22 +28906,11 @@ class Layout extends (0, _reactDefault.default).Component {
         let role = sessionStorage.getItem("userrole");
         if (role) {
             if (role === "admin") this.state.links.users = true;
-            else if (role === "student") ;
+            else if (role === "student") this.state.links.alltopics = true;
             else if (role === "supervisor") ;
             else if (role === "co-supervisor") ;
             else if (role === "panel-member") this.state.links.pmEvaluation = true;
         }
-    }
-    getItemCount() {
-        let cart = sessionStorage.getItem("cart");
-        let itemCount = 0;
-        if (cart) {
-            cart = JSON.parse(cart);
-            cart.forEach(function(item) {
-                itemCount += 1;
-            });
-        }
-        return itemCount;
     }
     getUserName() {
         let username = sessionStorage.getItem("username");
@@ -28949,7 +28939,7 @@ class Layout extends (0, _reactDefault.default).Component {
                                     children: "RPMS"
                                 }, void 0, false, {
                                     fileName: "src/components/Layout.js",
-                                    lineNumber: 87,
+                                    lineNumber: 75,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -28966,7 +28956,7 @@ class Layout extends (0, _reactDefault.default).Component {
                                                         children: "Users"
                                                     }, void 0, false, {
                                                         fileName: "src/components/Layout.js",
-                                                        lineNumber: 97,
+                                                        lineNumber: 85,
                                                         columnNumber: 23
                                                     }, this),
                                                     this.state.links.pmEvaluation && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
@@ -28975,39 +28965,39 @@ class Layout extends (0, _reactDefault.default).Component {
                                                         children: "Evaluation"
                                                     }, void 0, false, {
                                                         fileName: "src/components/Layout.js",
-                                                        lineNumber: 102,
+                                                        lineNumber: 90,
                                                         columnNumber: 23
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "src/components/Layout.js",
-                                                lineNumber: 95,
+                                                lineNumber: 83,
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
+                                                children: this.state.links.alltopics && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
                                                     className: "nav-item nav-link",
                                                     to: "/AllTReg",
                                                     children: "All Topic Registration"
                                                 }, void 0, false, {
                                                     fileName: "src/components/Layout.js",
-                                                    lineNumber: 109,
+                                                    lineNumber: 97,
                                                     columnNumber: 23
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "src/components/Layout.js",
-                                                lineNumber: 107,
+                                                lineNumber: 95,
                                                 columnNumber: 19
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "src/components/Layout.js",
-                                        lineNumber: 91,
+                                        lineNumber: 79,
                                         columnNumber: 17
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "src/components/Layout.js",
-                                    lineNumber: 90,
+                                    lineNumber: 78,
                                     columnNumber: 15
                                 }, this),
                                 "\xa0\xa0",
@@ -29016,7 +29006,7 @@ class Layout extends (0, _reactDefault.default).Component {
                                     children: this.getUserName()
                                 }, void 0, false, {
                                     fileName: "src/components/Layout.js",
-                                    lineNumber: 118,
+                                    lineNumber: 106,
                                     columnNumber: 17
                                 }, this),
                                 this.state.links.logout && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
@@ -29026,44 +29016,44 @@ class Layout extends (0, _reactDefault.default).Component {
                                     children: "Sign Out"
                                 }, void 0, false, {
                                     fileName: "src/components/Layout.js",
-                                    lineNumber: 121,
+                                    lineNumber: 109,
                                     columnNumber: 17
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "src/components/Layout.js",
-                            lineNumber: 86,
+                            lineNumber: 74,
                             columnNumber: 13
                         }, this)
                     }, void 0, false, {
                         fileName: "src/components/Layout.js",
-                        lineNumber: 85,
+                        lineNumber: 73,
                         columnNumber: 11
                     }, this)
                 }, void 0, false, {
                     fileName: "src/components/Layout.js",
-                    lineNumber: 84,
+                    lineNumber: 72,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
                     fileName: "src/components/Layout.js",
-                    lineNumber: 132,
+                    lineNumber: 120,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Outlet), {}, void 0, false, {
                     fileName: "src/components/Layout.js",
-                    lineNumber: 133,
+                    lineNumber: 121,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
                     fileName: "src/components/Layout.js",
-                    lineNumber: 134,
+                    lineNumber: 122,
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "src/components/Layout.js",
-            lineNumber: 83,
+            lineNumber: 71,
             columnNumber: 7
         }, this);
     }

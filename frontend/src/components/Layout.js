@@ -17,6 +17,7 @@ class Layout extends React.Component {
         username: false,
         users: false,
         pmEvaluation: false,
+        alltopics: false,
       },
     };
 
@@ -37,6 +38,7 @@ class Layout extends React.Component {
       if (role === "admin") {
         this.state.links.users = true;
       } else if (role === "student") {
+        this.state.links.alltopics = true;
       } else if (role === "supervisor") {
         //this.state.links.users = true;
       } else if (role === "co-supervisor") {
@@ -45,20 +47,6 @@ class Layout extends React.Component {
         this.state.links.pmEvaluation = true;
       }
     }
-  }
-
-  getItemCount() {
-    let cart = sessionStorage.getItem("cart");
-    let itemCount = 0;
-
-    if (cart) {
-      cart = JSON.parse(cart);
-      cart.forEach(function (item) {
-        itemCount += 1;
-      });
-    }
-
-    return itemCount;
   }
 
   getUserName() {
@@ -105,11 +93,11 @@ class Layout extends React.Component {
                     )}
                   </li>
                   <li>
-                    {
+                    {this.state.links.alltopics && (
                       <Link className='nav-item nav-link' to='/AllTReg'>
                         All Topic Registration
                       </Link>
-                    }
+                    )}
                   </li>
                 </ul>
               </div>
