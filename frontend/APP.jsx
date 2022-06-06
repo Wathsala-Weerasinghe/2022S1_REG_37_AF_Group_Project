@@ -4,7 +4,7 @@ import Chat from './components/Chat'
 import Join from './components/Join'
 import AcceptTopic from './components/AcceptTopic'
 import EvaluateDocument from "./components/EvaluateDocument";
-
+import Home from "./components/Home"
 export default class App extends Component{
 
     constructor(props){
@@ -16,6 +16,9 @@ export default class App extends Component{
     render(){
         return(
             <Router>
+                <Routes>
+                    <Route path="/" exact element={<Home/>}/>
+                </Routes>
                 <Routes>
                     <Route path="/chatJoin" exact element={<Join/>}/>
                 </Routes>

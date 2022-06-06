@@ -6,7 +6,7 @@ const addUser=({id,itNumber,roomId})=>{
     roomId=roomId.trim().toLowerCase()
 
     //check if student is there
-    const existingUser=students.find((user)=>user.roomId==roomId&& user.itNumber===itNumber)
+    const existingUser=students.find((user)=>user.roomId === roomId&& user.itNumber===itNumber)
 
     if(existingUser){
         return {error:'User is already logged in with the ITnumber'}

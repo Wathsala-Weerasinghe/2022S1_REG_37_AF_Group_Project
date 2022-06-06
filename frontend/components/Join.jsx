@@ -38,8 +38,9 @@ export default class Join extends Component{
                     <div>
                         <input placeholder='Room Id' className="form-control" type="text" onChange={this.onChangeRoomId}></input>
                     </div>
+                    <br/>
                     <Link onClick={this.validate} to={`/chat?itNumber=${this.state.itNumber}&roomId=${this.state.roomId}`}>
-                        <button type='submit' value="Sign In">Sign In</button>
+                        <button type='submit' className="btn btn-primary" value="Sign In">Sign In</button>
                     </Link>
                 </div>
 

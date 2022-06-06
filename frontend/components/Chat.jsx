@@ -72,7 +72,7 @@ const Chat=({location})=>{
     console.log(message,messages)
 
     return(
-        <div>
+        <div className="m-5" style={{backgroundColor:"rgb(200,200,200,0.5)", padding:"20px 50px 20px 50px", marginTop:"50px",marginBottom:"50px", borderRadius:"30px"}}>
             
             <div>
                 <ScrollToBottom>
@@ -100,16 +100,17 @@ const Chat=({location})=>{
                 </ScrollToBottom>
             </div>
             
-            <div>
-                <input
+            <div className="form-group">
+                <input className="form-control"
                 value={message}
                 onChange={(event)=>setMessage(event.target.value)}
                 onKeyPress={event=>event.key === 'Enter'?sendMessage(event):null}
 
                 />
             </div>
+            <br/>
             <div>
-                <button onClick={(event)=>sendMessage(event)}>Send</button>
+                <button className="btn btn-primary" onClick={(event)=>sendMessage(event)}>Send</button>
             </div>
         </div>
     )

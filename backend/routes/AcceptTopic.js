@@ -3,19 +3,13 @@ let acceptTopics=require("../models/AcceptTopics")
 
 //accept topic
 router.route("/accept").post((req,res)=>{
-    const GroupName=req.body.GroupName
     const GroupId=req.body.GroupId
-    const tel=req.body.tel
-    const TopicCategory=req.body.TopicCategory
     const TopicName=req.body.TopicName
     const Status=req.body.Status
     const Comment=req.body.Comment
 
     const newAccTopic=new acceptTopics({
-        GroupName,
         GroupId,
-        tel,
-        TopicCategory,
         TopicName,
         Status,
         Comment
@@ -31,19 +25,13 @@ router.route("/accept").post((req,res)=>{
 
 //reject topic
 router.route("/reject").post((req,res)=>{
-    const GroupName=req.body.GroupName
     const GroupId=req.body.GroupId
-    const tel=req.body.tel
-    const TopicCategory=req.body.TopicCategory
     const TopicName=req.body.TopicName
     const Status=req.body.Status
     const Comment=req.body.Comment
 
     const newAccTopic=new acceptTopics({
-        GroupName,
         GroupId,
-        tel,
-        TopicCategory,
         TopicName,
         Status,
         Comment

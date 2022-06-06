@@ -3,19 +3,7 @@ const Schema=mongoose.Schema
 
 const AcceptTopics=new Schema({
 
-    GroupName:{
-        type: String,
-        required: true
-    },
     GroupId:{
-        type: String,
-        required: true
-    },
-    tel:{
-        type:String,
-        required:true
-    },
-    TopicCategory:{
         type: String,
         required: true
     },

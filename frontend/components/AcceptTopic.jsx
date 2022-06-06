@@ -22,21 +22,6 @@ export default class AcceptTopic extends Component{
         }
     }
 
-    componentDidMount(){
-        axios.get('')
-        .then(res=>{
-            this.setState({
-                GroupName:res.data.GroupName,
-                GroupId:res.data.GroupId,
-                tel:res.data.phone,
-                TopicCategory:res.data.TopicCategory,
-                TopicName:res.data.TopicName,
-
-            })
-        }).catch((err)=>{
-            console.log(err)
-        })
-    }
 
     onChangeComment=(e)=> {
         const {name,value}=e.target
@@ -54,6 +39,19 @@ export default class AcceptTopic extends Component{
         console.log(e.target.value)
         this.setState({
             Status: e.target.value
+        })
+    }
+    onChangeGroupId=(e)=>{
+
+        this.setState({
+            GroupId: e.target.value
+        })
+    }
+
+    onChangeTopic=(e)=>{
+
+        this.setState({
+            TopicName: e.target.value
         })
     }
 
@@ -84,10 +82,7 @@ export default class AcceptTopic extends Component{
     onSubmit=(e)=>{
         e.preventDefault()
         const acceptTopic={
-            GroupName:this.state.GroupName,
             GroupId:this.state.GroupId,
-            tel:this.state.tel,
-            TopicCategory:this.state.TopicCategory,
             TopicName:this.state.TopicName,
             Status:this.state.Status,
             Comment:this.state.Comment,
@@ -105,12 +100,12 @@ export default class AcceptTopic extends Component{
             if(this.state.Status === 'accept'){
                 axios.post('http://localhost:3000/acceptTopic/accept', acceptTopic)
                     .then(res=> console.log(res.data))
-                swal.fire("Inserted","Student response recorded","success").then(()=>window.location='/evalDoc')
+                swal.fire("Inserted","Student topic accepted","success").then()
 
             }else if(this.state.Status === 'reject'){
                 axios.post('http://localhost:3000/acceptTopic/reject',acceptTopic)
                     .then(res=> console.log(res.data))
-                swal.fire("Inserted", "Student response recorded", "success").then(()=>window.location='evalDoc')
+                swal.fire("Inserted", "Student topic rejected", "success").then()
 
                 }
 
@@ -127,38 +122,20 @@ export default class AcceptTopic extends Component{
                 <h3><b>{this.state.GroupName}</b></h3>
                 <form onSubmit={this.onSubmit}>
                     <div className="form-group">
-                        <label htmlFor="grpName" className="form-label">Group Name</label>
-                        <input type="text" className="form-control" id="grpName"
-                        value={this.state.GroupName}
-                        disabled
-                        />
-                    </div>
-                    <div className="form-group">
                         <label htmlFor="grpId" className="form-label">Group Id</label>
                         <input type="text" className="form-control" id="grpId"
                         value={this.state.GroupId}
-                        disabled
+                               onChange={this.onChangeGroupId}
+
                         />
                     </div>
-                    <div className="form-group">
-                        <label htmlFor="tel" className="form-label">Contact number</label>
-                        <input type="text" className="form-control" id="tel"
-                        value={this.state.tel}
-                        disabled
-                        />
-                    </div>
-                    <div className="form-group">
-                        <label htmlFor="TopicCategory" className="form-label">Topic Category</label>
-                        <input type="text" className="form-control" id="TopicCategory"
-                        value={this.state.TopicCategory}
-                        disabled
-                        />
-                    </div>
+
                     <div className="form-group">
                         <label htmlFor="TopicName" className="form-label">Topic Name</label>
                         <input type="text" className="form-control" id="TopicName"
                         value={this.state.TopicName}
-                        disabled
+                               onChange={this.onChangeTopic}
+
                         />
                     </div>
                     <div className="form-group">

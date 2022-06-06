@@ -26982,6 +26982,8 @@ var _acceptTopic = require("./components/AcceptTopic");
 var _acceptTopicDefault = parcelHelpers.interopDefault(_acceptTopic);
 var _evaluateDocument = require("./components/EvaluateDocument");
 var _evaluateDocumentDefault = parcelHelpers.interopDefault(_evaluateDocument);
+var _home = require("./components/Home");
+var _homeDefault = parcelHelpers.interopDefault(_home);
 class App extends (0, _react.Component) {
     constructor(props){
         super(props);
@@ -26991,9 +26993,9 @@ class App extends (0, _react.Component) {
             children: [
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Routes), {
                     children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
-                        path: "/chatJoin",
+                        path: "/",
                         exact: true,
-                        element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _joinDefault.default), {}, void 0, false, void 0, void 0)
+                        element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _homeDefault.default), {}, void 0, false, void 0, void 0)
                     }, void 0, false, {
                         fileName: "APP.jsx",
                         lineNumber: 20,
@@ -27006,9 +27008,9 @@ class App extends (0, _react.Component) {
                 }, this),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Routes), {
                     children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
-                        path: "/chat",
+                        path: "/chatJoin",
                         exact: true,
-                        element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _chatDefault.default), {}, void 0, false, void 0, void 0)
+                        element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _joinDefault.default), {}, void 0, false, void 0, void 0)
                     }, void 0, false, {
                         fileName: "APP.jsx",
                         lineNumber: 23,
@@ -27021,9 +27023,9 @@ class App extends (0, _react.Component) {
                 }, this),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Routes), {
                     children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
-                        path: "/accTopic",
+                        path: "/chat",
                         exact: true,
-                        element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _acceptTopicDefault.default), {}, void 0, false, void 0, void 0)
+                        element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _chatDefault.default), {}, void 0, false, void 0, void 0)
                     }, void 0, false, {
                         fileName: "APP.jsx",
                         lineNumber: 26,
@@ -27036,9 +27038,9 @@ class App extends (0, _react.Component) {
                 }, this),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Routes), {
                     children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
-                        path: "/evalDoc",
+                        path: "/accTopic",
                         exact: true,
-                        element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _evaluateDocumentDefault.default), {}, void 0, false, void 0, void 0)
+                        element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _acceptTopicDefault.default), {}, void 0, false, void 0, void 0)
                     }, void 0, false, {
                         fileName: "APP.jsx",
                         lineNumber: 29,
@@ -27047,6 +27049,21 @@ class App extends (0, _react.Component) {
                 }, void 0, false, {
                     fileName: "APP.jsx",
                     lineNumber: 28,
+                    columnNumber: 17
+                }, this),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Routes), {
+                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
+                        path: "/evalDoc",
+                        exact: true,
+                        element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _evaluateDocumentDefault.default), {}, void 0, false, void 0, void 0)
+                    }, void 0, false, {
+                        fileName: "APP.jsx",
+                        lineNumber: 32,
+                        columnNumber: 21
+                    }, this)
+                }, void 0, false, {
+                    fileName: "APP.jsx",
+                    lineNumber: 31,
                     columnNumber: 17
                 }, this)
             ]
@@ -27064,7 +27081,7 @@ exports.default = App;
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-router-dom":"fdOAw","./components/Chat":"i4rIu","./components/Join":"guvmS","./components/AcceptTopic":"j91Tt","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./components/EvaluateDocument":"9hLdw"}],"fdOAw":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-router-dom":"fdOAw","./components/Chat":"i4rIu","./components/Join":"guvmS","./components/AcceptTopic":"j91Tt","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./components/EvaluateDocument":"9hLdw","./components/Home":"iQl8a"}],"fdOAw":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "MemoryRouter", ()=>(0, _reactRouter.MemoryRouter));
@@ -28871,6 +28888,14 @@ const Chat = ({ location  })=>{
     };
     console.log(message1, messages1);
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "m-5",
+        style: {
+            backgroundColor: "rgb(200,200,200,0.5)",
+            padding: "20px 50px 20px 50px",
+            marginTop: "50px",
+            marginBottom: "50px",
+            borderRadius: "30px"
+        },
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactScrollToBottomDefault.default), {
@@ -28918,7 +28943,9 @@ const Chat = ({ location  })=>{
                 columnNumber: 13
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "form-group",
                 children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                    className: "form-control",
                     value: message1,
                     onChange: (event)=>setMessage(event.target.value),
                     onKeyPress: (event)=>event.key === "Enter" ? sendMessage(event) : null
@@ -28932,18 +28959,24 @@ const Chat = ({ location  })=>{
                 lineNumber: 103,
                 columnNumber: 13
             }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
+                fileName: "components/Chat.jsx",
+                lineNumber: 111,
+                columnNumber: 13
+            }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                    className: "btn btn-primary",
                     onClick: (event)=>sendMessage(event),
                     children: "Send"
                 }, void 0, false, {
                     fileName: "components/Chat.jsx",
-                    lineNumber: 112,
+                    lineNumber: 113,
                     columnNumber: 17
                 }, undefined)
             }, void 0, false, {
                 fileName: "components/Chat.jsx",
-                lineNumber: 111,
+                lineNumber: 112,
                 columnNumber: 13
             }, undefined)
         ]
@@ -43054,21 +43087,27 @@ class Join extends (0, _react.Component) {
                         lineNumber: 38,
                         columnNumber: 21
                     }, this),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
+                        fileName: "components/Join.jsx",
+                        lineNumber: 41,
+                        columnNumber: 21
+                    }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
                         onClick: this.validate,
                         to: `/chat?itNumber=${this.state.itNumber}&roomId=${this.state.roomId}`,
                         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
                             type: "submit",
+                            className: "btn btn-primary",
                             value: "Sign In",
                             children: "Sign In"
                         }, void 0, false, {
                             fileName: "components/Join.jsx",
-                            lineNumber: 42,
+                            lineNumber: 43,
                             columnNumber: 25
                         }, this)
                     }, void 0, false, {
                         fileName: "components/Join.jsx",
-                        lineNumber: 41,
+                        lineNumber: 42,
                         columnNumber: 21
                     }, this)
                 ]
@@ -43123,19 +43162,6 @@ class AcceptTopic extends (0, _react.Component) {
             CommentError: ""
         };
     }
-    componentDidMount() {
-        (0, _axiosDefault.default).get("").then((res)=>{
-            this.setState({
-                GroupName: res.data.GroupName,
-                GroupId: res.data.GroupId,
-                tel: res.data.phone,
-                TopicCategory: res.data.TopicCategory,
-                TopicName: res.data.TopicName
-            });
-        }).catch((err)=>{
-            console.log(err);
-        });
-    }
     onChangeComment = (e)=>{
         const { name , value  } = e.target;
         console.log(name);
@@ -43148,6 +43174,16 @@ class AcceptTopic extends (0, _react.Component) {
         console.log(e.target.value);
         this.setState({
             Status: e.target.value
+        });
+    };
+    onChangeGroupId = (e)=>{
+        this.setState({
+            GroupId: e.target.value
+        });
+    };
+    onChangeTopic = (e)=>{
+        this.setState({
+            TopicName: e.target.value
         });
     };
     validate = ()=>{
@@ -43167,10 +43203,7 @@ class AcceptTopic extends (0, _react.Component) {
     onSubmit = (e)=>{
         e.preventDefault();
         const acceptTopic = {
-            GroupName: this.state.GroupName,
             GroupId: this.state.GroupId,
-            tel: this.state.tel,
-            TopicCategory: this.state.TopicCategory,
             TopicName: this.state.TopicName,
             Status: this.state.Status,
             Comment: this.state.Comment
@@ -43181,10 +43214,10 @@ class AcceptTopic extends (0, _react.Component) {
             console.log(this.state.Status);
             if (this.state.Status === "accept") {
                 (0, _axiosDefault.default).post("http://localhost:3000/acceptTopic/accept", acceptTopic).then((res)=>console.log(res.data));
-                (0, _sweetalert2Default.default).fire("Inserted", "Student response recorded", "success").then(()=>window.location = "/evalDoc");
+                (0, _sweetalert2Default.default).fire("Inserted", "Student topic accepted", "success").then();
             } else if (this.state.Status === "reject") {
                 (0, _axiosDefault.default).post("http://localhost:3000/acceptTopic/reject", acceptTopic).then((res)=>console.log(res.data));
-                (0, _sweetalert2Default.default).fire("Inserted", "Student response recorded", "success").then(()=>window.location = "evalDoc");
+                (0, _sweetalert2Default.default).fire("Inserted", "Student topic rejected", "success").then();
             }
         }
     };
@@ -43204,12 +43237,12 @@ class AcceptTopic extends (0, _react.Component) {
                         children: this.state.GroupName
                     }, void 0, false, {
                         fileName: "components/AcceptTopic.jsx",
-                        lineNumber: 127,
+                        lineNumber: 122,
                         columnNumber: 21
                     }, this)
                 }, void 0, false, {
                     fileName: "components/AcceptTopic.jsx",
-                    lineNumber: 127,
+                    lineNumber: 122,
                     columnNumber: 17
                 }, this),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("form", {
@@ -43219,41 +43252,12 @@ class AcceptTopic extends (0, _react.Component) {
                             className: "form-group",
                             children: [
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
-                                    htmlFor: "grpName",
-                                    className: "form-label",
-                                    children: "Group Name"
-                                }, void 0, false, {
-                                    fileName: "components/AcceptTopic.jsx",
-                                    lineNumber: 130,
-                                    columnNumber: 25
-                                }, this),
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
-                                    type: "text",
-                                    className: "form-control",
-                                    id: "grpName",
-                                    value: this.state.GroupName,
-                                    disabled: true
-                                }, void 0, false, {
-                                    fileName: "components/AcceptTopic.jsx",
-                                    lineNumber: 131,
-                                    columnNumber: 25
-                                }, this)
-                            ]
-                        }, void 0, true, {
-                            fileName: "components/AcceptTopic.jsx",
-                            lineNumber: 129,
-                            columnNumber: 21
-                        }, this),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                            className: "form-group",
-                            children: [
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
                                     htmlFor: "grpId",
                                     className: "form-label",
                                     children: "Group Id"
                                 }, void 0, false, {
                                     fileName: "components/AcceptTopic.jsx",
-                                    lineNumber: 137,
+                                    lineNumber: 125,
                                     columnNumber: 25
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
@@ -43261,74 +43265,16 @@ class AcceptTopic extends (0, _react.Component) {
                                     className: "form-control",
                                     id: "grpId",
                                     value: this.state.GroupId,
-                                    disabled: true
+                                    onChange: this.onChangeGroupId
                                 }, void 0, false, {
                                     fileName: "components/AcceptTopic.jsx",
-                                    lineNumber: 138,
+                                    lineNumber: 126,
                                     columnNumber: 25
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "components/AcceptTopic.jsx",
-                            lineNumber: 136,
-                            columnNumber: 21
-                        }, this),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                            className: "form-group",
-                            children: [
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
-                                    htmlFor: "tel",
-                                    className: "form-label",
-                                    children: "Contact number"
-                                }, void 0, false, {
-                                    fileName: "components/AcceptTopic.jsx",
-                                    lineNumber: 144,
-                                    columnNumber: 25
-                                }, this),
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
-                                    type: "text",
-                                    className: "form-control",
-                                    id: "tel",
-                                    value: this.state.tel,
-                                    disabled: true
-                                }, void 0, false, {
-                                    fileName: "components/AcceptTopic.jsx",
-                                    lineNumber: 145,
-                                    columnNumber: 25
-                                }, this)
-                            ]
-                        }, void 0, true, {
-                            fileName: "components/AcceptTopic.jsx",
-                            lineNumber: 143,
-                            columnNumber: 21
-                        }, this),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                            className: "form-group",
-                            children: [
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
-                                    htmlFor: "TopicCategory",
-                                    className: "form-label",
-                                    children: "Topic Category"
-                                }, void 0, false, {
-                                    fileName: "components/AcceptTopic.jsx",
-                                    lineNumber: 151,
-                                    columnNumber: 25
-                                }, this),
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
-                                    type: "text",
-                                    className: "form-control",
-                                    id: "TopicCategory",
-                                    value: this.state.TopicCategory,
-                                    disabled: true
-                                }, void 0, false, {
-                                    fileName: "components/AcceptTopic.jsx",
-                                    lineNumber: 152,
-                                    columnNumber: 25
-                                }, this)
-                            ]
-                        }, void 0, true, {
-                            fileName: "components/AcceptTopic.jsx",
-                            lineNumber: 150,
+                            lineNumber: 124,
                             columnNumber: 21
                         }, this),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -43340,7 +43286,7 @@ class AcceptTopic extends (0, _react.Component) {
                                     children: "Topic Name"
                                 }, void 0, false, {
                                     fileName: "components/AcceptTopic.jsx",
-                                    lineNumber: 158,
+                                    lineNumber: 134,
                                     columnNumber: 25
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
@@ -43348,16 +43294,16 @@ class AcceptTopic extends (0, _react.Component) {
                                     className: "form-control",
                                     id: "TopicName",
                                     value: this.state.TopicName,
-                                    disabled: true
+                                    onChange: this.onChangeTopic
                                 }, void 0, false, {
                                     fileName: "components/AcceptTopic.jsx",
-                                    lineNumber: 159,
+                                    lineNumber: 135,
                                     columnNumber: 25
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "components/AcceptTopic.jsx",
-                            lineNumber: 157,
+                            lineNumber: 133,
                             columnNumber: 21
                         }, this),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -43369,7 +43315,7 @@ class AcceptTopic extends (0, _react.Component) {
                                     children: "Comment"
                                 }, void 0, false, {
                                     fileName: "components/AcceptTopic.jsx",
-                                    lineNumber: 165,
+                                    lineNumber: 142,
                                     columnNumber: 25
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("textarea", {
@@ -43380,7 +43326,7 @@ class AcceptTopic extends (0, _react.Component) {
                                     onChange: (e)=>this.onChangeComment(e)
                                 }, void 0, false, {
                                     fileName: "components/AcceptTopic.jsx",
-                                    lineNumber: 166,
+                                    lineNumber: 143,
                                     columnNumber: 25
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -43390,13 +43336,13 @@ class AcceptTopic extends (0, _react.Component) {
                                     children: this.state.CommentError
                                 }, void 0, false, {
                                     fileName: "components/AcceptTopic.jsx",
-                                    lineNumber: 167,
+                                    lineNumber: 144,
                                     columnNumber: 25
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "components/AcceptTopic.jsx",
-                            lineNumber: 164,
+                            lineNumber: 141,
                             columnNumber: 21
                         }, this),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -43414,7 +43360,7 @@ class AcceptTopic extends (0, _react.Component) {
                                             checked: this.state.Status === "accept"
                                         }, void 0, false, {
                                             fileName: "components/AcceptTopic.jsx",
-                                            lineNumber: 184,
+                                            lineNumber: 161,
                                             columnNumber: 29
                                         }, this),
                                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
@@ -43423,13 +43369,13 @@ class AcceptTopic extends (0, _react.Component) {
                                             children: "Accept"
                                         }, void 0, false, {
                                             fileName: "components/AcceptTopic.jsx",
-                                            lineNumber: 189,
+                                            lineNumber: 166,
                                             columnNumber: 33
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "components/AcceptTopic.jsx",
-                                    lineNumber: 183,
+                                    lineNumber: 160,
                                     columnNumber: 25
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -43445,7 +43391,7 @@ class AcceptTopic extends (0, _react.Component) {
                                             checked: this.state.Status === "reject"
                                         }, void 0, false, {
                                             fileName: "components/AcceptTopic.jsx",
-                                            lineNumber: 192,
+                                            lineNumber: 169,
                                             columnNumber: 29
                                         }, this),
                                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
@@ -43454,19 +43400,19 @@ class AcceptTopic extends (0, _react.Component) {
                                             children: "Reject"
                                         }, void 0, false, {
                                             fileName: "components/AcceptTopic.jsx",
-                                            lineNumber: 197,
+                                            lineNumber: 174,
                                             columnNumber: 33
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "components/AcceptTopic.jsx",
-                                    lineNumber: 191,
+                                    lineNumber: 168,
                                     columnNumber: 25
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "components/AcceptTopic.jsx",
-                            lineNumber: 171,
+                            lineNumber: 148,
                             columnNumber: 21
                         }, this),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -43478,66 +43424,24 @@ class AcceptTopic extends (0, _react.Component) {
                                 className: "btn btn-primary"
                             }, void 0, false, {
                                 fileName: "components/AcceptTopic.jsx",
-                                lineNumber: 201,
+                                lineNumber: 178,
                                 columnNumber: 25
                             }, this)
                         }, void 0, false, {
                             fileName: "components/AcceptTopic.jsx",
-                            lineNumber: 200,
-                            columnNumber: 21
-                        }, this),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("select", {
-                            className: "form-select",
-                            "aria-label": "Default select example",
-                            children: [
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("option", {
-                                    selected: true,
-                                    children: "Open this select menu"
-                                }, void 0, false, {
-                                    fileName: "components/AcceptTopic.jsx",
-                                    lineNumber: 204,
-                                    columnNumber: 25
-                                }, this),
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("option", {
-                                    value: "1",
-                                    children: "One"
-                                }, void 0, false, {
-                                    fileName: "components/AcceptTopic.jsx",
-                                    lineNumber: 205,
-                                    columnNumber: 25
-                                }, this),
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("option", {
-                                    value: "2",
-                                    children: "Two"
-                                }, void 0, false, {
-                                    fileName: "components/AcceptTopic.jsx",
-                                    lineNumber: 206,
-                                    columnNumber: 25
-                                }, this),
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("option", {
-                                    value: "3",
-                                    children: "Three"
-                                }, void 0, false, {
-                                    fileName: "components/AcceptTopic.jsx",
-                                    lineNumber: 207,
-                                    columnNumber: 25
-                                }, this)
-                            ]
-                        }, void 0, true, {
-                            fileName: "components/AcceptTopic.jsx",
-                            lineNumber: 203,
+                            lineNumber: 177,
                             columnNumber: 21
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "components/AcceptTopic.jsx",
-                    lineNumber: 128,
+                    lineNumber: 123,
                     columnNumber: 17
                 }, this)
             ]
         }, void 0, true, {
             fileName: "components/AcceptTopic.jsx",
-            lineNumber: 126,
+            lineNumber: 121,
             columnNumber: 13
         }, this);
     }
@@ -50735,6 +50639,95 @@ exports.default = EvaluateDocument;
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","axios":"jo6P5","sweetalert2":"1HyFr","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react-bootstrap":"3AD9A"}]},["1xC6H","kn2YZ","g9R30"], "g9R30", "parcelRequire10c2")
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","axios":"jo6P5","sweetalert2":"1HyFr","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react-bootstrap":"3AD9A"}],"iQl8a":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$d595 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$d595.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _reactRouterDom = require("react-router-dom");
+class Home extends (0, _react.Component) {
+    constructor(props){
+        super(props);
+    }
+    render() {
+        return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
+            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("center", {
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                    className: "container d-flex justify-content-evenly mt-5",
+                    children: [
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
+                                to: "/chatJoin",
+                                className: "btn btn-primary",
+                                children: "Chat"
+                            }, void 0, false, {
+                                fileName: "components/Home.jsx",
+                                lineNumber: 21,
+                                columnNumber: 29
+                            }, this)
+                        }, void 0, false, {
+                            fileName: "components/Home.jsx",
+                            lineNumber: 20,
+                            columnNumber: 25
+                        }, this),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
+                                to: "/accTopic",
+                                className: "btn btn-primary",
+                                children: "Accept Topic"
+                            }, void 0, false, {
+                                fileName: "components/Home.jsx",
+                                lineNumber: 25,
+                                columnNumber: 29
+                            }, this)
+                        }, void 0, false, {
+                            fileName: "components/Home.jsx",
+                            lineNumber: 24,
+                            columnNumber: 25
+                        }, this),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
+                                to: "/evalDoc",
+                                className: "btn btn-primary",
+                                children: "Evaluate Document"
+                            }, void 0, false, {
+                                fileName: "components/Home.jsx",
+                                lineNumber: 28,
+                                columnNumber: 29
+                            }, this)
+                        }, void 0, false, {
+                            fileName: "components/Home.jsx",
+                            lineNumber: 27,
+                            columnNumber: 25
+                        }, this)
+                    ]
+                }, void 0, true, {
+                    fileName: "components/Home.jsx",
+                    lineNumber: 18,
+                    columnNumber: 21
+                }, this)
+            }, void 0, false, {
+                fileName: "components/Home.jsx",
+                lineNumber: 17,
+                columnNumber: 17
+            }, this)
+        }, void 0, false);
+    }
+}
+exports.default = Home;
+
+  $parcel$ReactRefreshHelpers$d595.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-router-dom":"fdOAw","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}]},["1xC6H","kn2YZ","g9R30"], "g9R30", "parcelRequire10c2")
 
 //# sourceMappingURL=index.d498c491.js.map
